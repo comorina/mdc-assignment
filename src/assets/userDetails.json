@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "username": "Shivam Pandey",
+    "shortInfo": "Full-stack developer with expertise in Java and React.",
+    "companyName": "Foxit Software",
+    "yearsOfExperience": 4,
+    "skills": ["Java", "Spring Boot", "React.js", "Redux", "TypeScript", "SQL", "Microservices"],
+    "projects": [
+      {
+        "projectName": "Agile Work Estimation Tool",
+        "whatHaveDone": "Developed backend services and integrated with frontend for real-time team estimations.",
+        "roleAndResponsibility": "Backend Developer - Designed REST APIs, authentication system, and database schema.",
+        "skills": ["Java", "Spring Boot", "MySQL", "JWT", "Agile"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "Rahul Kumar",
+    "shortInfo": "Frontend developer passionate about building scalable UIs.",
+    "companyName": "Capgemini",
+    "yearsOfExperience": 3,
+    "skills": ["React.js", "Next.js", "TypeScript", "Redux Toolkit", "HTML5", "CSS3"],
+    "projects": [
+      {
+        "projectName": "Customer Onboarding Portal",
+        "whatHaveDone": "Developed dynamic forms with validations and API integrations.",
+        "roleAndResponsibility": "Frontend Developer - Implemented UI components and state management.",
+        "skills": ["React.js", "Redux Toolkit", "TypeScript"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "username": "Ananya Singh",
+    "shortInfo": "Backend developer specializing in microservices architecture.",
+    "companyName": "Deloitte",
+    "yearsOfExperience": 5,
+    "skills": ["Java", "Spring Boot", "Kafka", "MongoDB", "Docker", "Kubernetes"],
+    "projects": [
+      {
+        "projectName": "Payment Gateway Service",
+        "whatHaveDone": "Built microservices for payment processing with Kafka integration.",
+        "roleAndResponsibility": "Backend Developer - Implemented event-driven architecture.",
+        "skills": ["Java", "Spring Boot", "Kafka", "MongoDB"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "username": "Vikas Mehta",
+    "shortInfo": "Data engineer with strong skills in big data and pipelines.",
+    "companyName": "Infosys",
+    "yearsOfExperience": 6,
+    "skills": ["Python", "Spark", "Hadoop", "Airflow", "AWS", "ETL"],
+    "projects": [
+      {
+        "projectName": "Sales Data Lake",
+        "whatHaveDone": "Developed scalable ETL pipelines for structured and unstructured data.",
+        "roleAndResponsibility": "Data Engineer - Designed data ingestion and transformation flows.",
+        "skills": ["Python", "Spark", "Airflow", "AWS"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "username": "Priya Sharma",
+    "shortInfo": "UI/UX engineer creating intuitive and accessible interfaces.",
+    "companyName": "Microsoft",
+    "yearsOfExperience": 4,
+    "skills": ["React.js", "Figma", "TailwindCSS", "Accessibility", "JavaScript", "Storybook"],
+    "projects": [
+      {
+        "projectName": "Accessibility Compliance Tool",
+        "whatHaveDone": "Ensured WCAG compliance across enterprise applications.",
+        "roleAndResponsibility": "UI Engineer - Created reusable components and accessibility checks.",
+        "skills": ["React.js", "Storybook", "TailwindCSS"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "username": "Arjun Verma",
+    "shortInfo": "Cloud engineer with expertise in AWS and serverless solutions.",
+    "companyName": "Amazon",
+    "yearsOfExperience": 7,
+    "skills": ["AWS Lambda", "API Gateway", "DynamoDB", "Node.js", "Terraform"],
+    "projects": [
+      {
+        "projectName": "Order Processing System",
+        "whatHaveDone": "Designed event-driven serverless architecture for order workflows.",
+        "roleAndResponsibility": "Cloud Engineer - Managed CI/CD and infrastructure as code.",
+        "skills": ["AWS Lambda", "Node.js", "Terraform"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "username": "Neha Gupta",
+    "shortInfo": "Mobile developer focused on cross-platform apps.",
+    "companyName": "Flipkart",
+    "yearsOfExperience": 3,
+    "skills": ["React Native", "Expo", "TypeScript", "Redux", "Firebase"],
+    "projects": [
+      {
+        "projectName": "E-commerce Shopping App",
+        "whatHaveDone": "Built mobile application for order browsing, cart, and checkout.",
+        "roleAndResponsibility": "Mobile Developer - Implemented push notifications and deep linking.",
+        "skills": ["React Native", "Redux", "Firebase"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "username": "Amit Raj",
+    "shortInfo": "DevOps engineer with automation and CI/CD expertise.",
+    "companyName": "TCS",
+    "yearsOfExperience": 6,
+    "skills": ["Jenkins", "Docker", "Kubernetes", "Ansible", "Linux", "AWS"],
+    "projects": [
+      {
+        "projectName": "CI/CD Pipeline Automation",
+        "whatHaveDone": "Automated builds, deployments, and monitoring with Kubernetes.",
+        "roleAndResponsibility": "DevOps Engineer - Integrated automated testing and monitoring.",
+        "skills": ["Jenkins", "Docker", "Kubernetes", "Ansible"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "username": "Sneha Malhotra",
+    "shortInfo": "Frontend developer creating performant SPAs.",
+    "companyName": "Adobe",
+    "yearsOfExperience": 5,
+    "skills": ["React.js", "Vue.js", "TypeScript", "GraphQL", "Sass"],
+    "projects": [
+      {
+        "projectName": "Creative Suite Dashboard",
+        "whatHaveDone": "Developed dashboard to manage Adobe Creative Suite subscriptions.",
+        "roleAndResponsibility": "Frontend Developer - Implemented GraphQL queries and UI components.",
+        "skills": ["React.js", "GraphQL", "TypeScript"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "username": "Rohan Yadav",
+    "shortInfo": "Software engineer skilled in API design and integration.",
+    "companyName": "Google",
+    "yearsOfExperience": 8,
+    "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
+    "projects": [
+      {
+        "projectName": "Global Messaging Platform",
+        "whatHaveDone": "Developed scalable APIs for real-time messaging.",
+        "roleAndResponsibility": "Software Engineer - Designed REST and gRPC endpoints.",
+        "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
+      }
+    ]
+  }
+]
