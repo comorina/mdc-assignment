@@ -40,7 +40,7 @@ function Sidebar() {
             return (
               <>
                 <ListItem key={item}>
-                  <ListItemButton>
+                  <ListItemButton component={NavLink} to="/user" end>
                     <ListItemText primary={`User ${item}`} />
                   </ListItemButton>
                 </ListItem>

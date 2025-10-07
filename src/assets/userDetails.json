@@ -2,6 +2,7 @@
   {
     "id": 1,
     "username": "Shivam Pandey",
+    "image": "https://i.pravatar.cc/150?img=12",
     "shortInfo": "Full-stack developer with expertise in Java and React.",
     "companyName": "Foxit Software",
     "yearsOfExperience": 4,
@@ -18,6 +19,7 @@
   {
     "id": 2,
     "username": "Rahul Kumar",
+    "image": "https://i.pravatar.cc/150?img=13",
     "shortInfo": "Frontend developer passionate about building scalable UIs.",
     "companyName": "Capgemini",
     "yearsOfExperience": 3,
@@ -34,6 +36,7 @@
   {
     "id": 3,
     "username": "Ananya Singh",
+    "image": "https://i.pravatar.cc/150?img=14",
     "shortInfo": "Backend developer specializing in microservices architecture.",
     "companyName": "Deloitte",
     "yearsOfExperience": 5,
@@ -50,6 +53,7 @@
   {
     "id": 4,
     "username": "Vikas Mehta",
+    "image": "https://i.pravatar.cc/150?img=15",
     "shortInfo": "Data engineer with strong skills in big data and pipelines.",
     "companyName": "Infosys",
     "yearsOfExperience": 6,
@@ -66,6 +70,7 @@
   {
     "id": 5,
     "username": "Priya Sharma",
+    "image": "https://i.pravatar.cc/150?img=16",
     "shortInfo": "UI/UX engineer creating intuitive and accessible interfaces.",
     "companyName": "Microsoft",
     "yearsOfExperience": 4,
@@ -82,6 +87,7 @@
   {
     "id": 6,
     "username": "Arjun Verma",
+    "image": "https://i.pravatar.cc/150?img=17",
     "shortInfo": "Cloud engineer with expertise in AWS and serverless solutions.",
     "companyName": "Amazon",
     "yearsOfExperience": 7,
@@ -98,6 +104,7 @@
   {
     "id": 7,
     "username": "Neha Gupta",
+    "image": "https://i.pravatar.cc/150?img=18",
     "shortInfo": "Mobile developer focused on cross-platform apps.",
     "companyName": "Flipkart",
     "yearsOfExperience": 3,
@@ -114,6 +121,7 @@
   {
     "id": 8,
     "username": "Amit Raj",
+    "image": "https://i.pravatar.cc/150?img=19",
     "shortInfo": "DevOps engineer with automation and CI/CD expertise.",
     "companyName": "TCS",
     "yearsOfExperience": 6,
@@ -130,6 +138,7 @@
   {
     "id": 9,
     "username": "Sneha Malhotra",
+    "image": "https://i.pravatar.cc/150?img=20",
     "shortInfo": "Frontend developer creating performant SPAs.",
     "companyName": "Adobe",
     "yearsOfExperience": 5,
@@ -146,6 +155,7 @@
   {
     "id": 10,
     "username": "Rohan Yadav",
+    "image": "https://i.pravatar.cc/150?img=21",
     "shortInfo": "Software engineer skilled in API design and integration.",
     "companyName": "Google",
     "yearsOfExperience": 8,
