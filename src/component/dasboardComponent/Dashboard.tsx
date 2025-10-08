@@ -1,8 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProfileCard from "../pofileCardComponent/ProfileCard";
 import { DashboardContainer } from "./dashboard.style";
-import { useDispatch, useSelector } from "react-redux";
-import { storeTheData } from "../../storeManagement/slices/userDetailsSlice";
+import { useSelector } from "react-redux";
 
 type Project = {
   projectName: string;
@@ -30,26 +29,19 @@ interface RootState {
 }
 
 function Dashboard() {
-  const data = useSelector((state: RootState) => {
-    return state?.userData?.userDetail;
-  });
-  const dispatch = useDispatch();
-
-  function getUserData() {
-    fetch("src/assets/userDetails.json", {
-      method: "GET",
-    }).then((response) => {
-      response.json().then((response) => {
-        dispatch(storeTheData(response));
-      });
-    });
-  }
+  const reduxData = useSelector((state: RootState) => state?.userData?.userDetail);
+  const [data, setData] = useState<Users>(reduxData ?? []);
 
   useEffect(() => {
-    getUserData();
-  }, []);
-
-  console.log("data from redux", data);
+    if (!reduxData || reduxData.length === 0) {
+      const localData = localStorage.getItem("userDetails");
+      if (localData) {
+        setData(JSON.parse(localData));
+      }
+    } else {
+      setData(reduxData);
+    }
+  }, [reduxData]);
 
   return (
     <DashboardContainer sx={{}}>
