@@ -6,5 +6,4 @@ export const HomeContainer = styled(Box)(() => ({
   width: "100%",
   height: "100%",
   gridTemplateColumns: "250px 1fr",
-  gap: "5px",
 }));

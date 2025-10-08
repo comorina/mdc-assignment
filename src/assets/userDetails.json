@@ -2,170 +2,612 @@
   {
     "id": 1,
     "username": "Shivam Pandey",
+    "email": "shivam.pandey@foxit.com",
+    "contactNumber": "+91-9876543210",
     "image": "https://i.pravatar.cc/150?img=12",
     "shortInfo": "Full-stack developer with expertise in Java and React.",
+    "summary": "Experienced full-stack developer at Foxit Software with 4 years in Java, Spring Boot, and React. Skilled in microservices and REST API design.",
     "companyName": "Foxit Software",
     "yearsOfExperience": 4,
-    "skills": ["Java", "Spring Boot", "React.js", "Redux", "TypeScript", "SQL", "Microservices"],
+    "designation": "Full-stack Developer",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "React.js",
+      "Redux",
+      "TypeScript",
+      "SQL",
+      "Microservices"
+    ],
     "projects": [
       {
         "projectName": "Agile Work Estimation Tool",
+        "year": 2022,
         "whatHaveDone": "Developed backend services and integrated with frontend for real-time team estimations.",
         "roleAndResponsibility": "Backend Developer - Designed REST APIs, authentication system, and database schema.",
+        "designation": "Backend Developer",
         "skills": ["Java", "Spring Boot", "MySQL", "JWT", "Agile"]
+      },
+      {
+        "projectName": "Poker-style Work Estimation Tool",
+        "year": 2023,
+        "whatHaveDone": "Designed and implemented the backend services that power a real-time, poker-style estimation tool. Implemented room/session management, unique link generation for participants, vote collection, result aggregation, and reconnection handling.",
+        "roleAndResponsibility": "Backend Developer - Responsible for designing REST/WebSocket APIs, persistent storage schema, real-time event handling (WebSocket), concurrency handling, and writing unit & integration tests. Implemented server-side logic to prevent duplicate votes and to compute consensus statistics.",
+        "designation": "Backend Developer",
+        "skills": [
+          "Java",
+          "Spring Boot",
+          "WebSocket (STOMP)",
+          "Redis",
+          "PostgreSQL",
+          "JWT",
+          "JUnit"
+        ]
+      },
+      {
+        "projectName": "Microservices Authentication & Authorization Gateway",
+        "year": 2024,
+        "whatHaveDone": "Built a centralized authentication service and API Gateway that authenticates users once and enforces role-based access across multiple microservices. Implemented JWT issuance/validation, token refresh, and privilege-based routing at the gateway to keep downstream services stateless.",
+        "roleAndResponsibility": "Backend Developer - Designed authentication flow (login-service), implemented Spring Security + OAuth2/JWT, created gateway filters for token validation and RBAC enforcement, and integrated user-role management with the user-service. Documented security design and supported rollout/migrations.",
+        "designation": "Backend Developer",
+        "skills": [
+          "Java",
+          "Spring Boot",
+          "Spring Security",
+          "OAuth2",
+          "JWT",
+          "API Gateway",
+          "MySQL",
+          "Redis"
+        ]
+      },
+      {
+        "projectName": "Document Collaboration Platform",
+        "year": 2021,
+        "whatHaveDone": "Implemented real-time document editing and sharing features using WebSocket and REST APIs.",
+        "roleAndResponsibility": "Full-stack Developer - Developed backend logic and React-based frontend for collaborative editing.",
+        "designation": "Full-stack Developer",
+        "skills": ["Java", "Spring Boot", "React.js", "WebSocket", "MongoDB"]
+      },
+      {
+        "projectName": "Task Management System",
+        "year": 2020,
+        "whatHaveDone": "Developed a web-based task management system with user authentication and role-based access.",
+        "roleAndResponsibility": "Full-stack Developer - Built REST APIs and React UI for task assignment and tracking.",
+        "designation": "Full-stack Developer",
+        "skills": ["Java", "Spring Boot", "React.js", "JWT", "MySQL"]
+      },
+      {
+        "projectName": "Employee Feedback Portal",
+        "year": 2022,
+        "whatHaveDone": "Created a portal for collecting and analyzing employee feedback using charts and dashboards.",
+        "roleAndResponsibility": "Full-stack Developer - Designed backend logic and interactive frontend components.",
+        "designation": "Full-stack Developer",
+        "skills": ["Java", "Spring Boot", "React.js", "Redux", "Chart.js"]
+      },
+      {
+        "projectName": "API Rate Limiting Service",
+        "year": 2023,
+        "whatHaveDone": "Implemented a microservice for API rate limiting and monitoring using Redis.",
+        "roleAndResponsibility": "Backend Developer - Developed rate limiting logic and integrated with existing APIs.",
+        "designation": "Backend Developer",
+        "skills": ["Java", "Spring Boot", "Redis", "Microservices"]
       }
     ]
   },
   {
     "id": 2,
     "username": "Rahul Kumar",
+    "email": "rahul.kumar@capgemini.com",
+    "contactNumber": "+91-9123456780",
     "image": "https://i.pravatar.cc/150?img=13",
     "shortInfo": "Frontend developer passionate about building scalable UIs.",
+    "summary": "Frontend developer at Capgemini with 3 years of experience in React.js and Next.js. Specializes in dynamic forms and scalable UI components.",
     "companyName": "Capgemini",
     "yearsOfExperience": 3,
-    "skills": ["React.js", "Next.js", "TypeScript", "Redux Toolkit", "HTML5", "CSS3"],
+    "designation": "Frontend Developer",
+    "skills": [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "HTML5",
+      "CSS3"
+    ],
     "projects": [
       {
         "projectName": "Customer Onboarding Portal",
+        "year": 2023,
         "whatHaveDone": "Developed dynamic forms with validations and API integrations.",
         "roleAndResponsibility": "Frontend Developer - Implemented UI components and state management.",
+        "designation": "Frontend Developer",
         "skills": ["React.js", "Redux Toolkit", "TypeScript"]
+      },
+      {
+        "projectName": "Employee Dashboard",
+        "year": 2022,
+        "whatHaveDone": "Created a responsive dashboard for employee performance tracking and analytics.",
+        "roleAndResponsibility": "Frontend Developer - Designed reusable chart components and integrated REST APIs.",
+        "designation": "Frontend Developer",
+        "skills": ["React.js", "Next.js", "TypeScript", "Chart.js"]
+      },
+      {
+        "projectName": "Product Catalog SPA",
+        "year": 2021,
+        "whatHaveDone": "Built a single-page application for product catalog browsing and filtering.",
+        "roleAndResponsibility": "Frontend Developer - Developed reusable UI components and search/filter logic.",
+        "designation": "Frontend Developer",
+        "skills": ["React.js", "Redux Toolkit", "TypeScript", "CSS3"]
+      },
+      {
+        "projectName": "Feedback Collection Widget",
+        "year": 2022,
+        "whatHaveDone": "Created an embeddable feedback widget for collecting user reviews.",
+        "roleAndResponsibility": "Frontend Developer - Designed widget UI and integrated with backend APIs.",
+        "designation": "Frontend Developer",
+        "skills": ["React.js", "TypeScript", "HTML5"]
+      },
+      {
+        "projectName": "Admin Panel for CMS",
+        "year": 2023,
+        "whatHaveDone": "Developed an admin panel for content management with role-based access.",
+        "roleAndResponsibility": "Frontend Developer - Built forms, tables, and authentication flows.",
+        "designation": "Frontend Developer",
+        "skills": ["React.js", "Next.js", "Redux Toolkit", "TypeScript"]
       }
     ]
   },
   {
     "id": 3,
     "username": "Ananya Singh",
+    "email": "ananya.singh@deloitte.com",
+    "contactNumber": "+91-9988776655",
     "image": "https://i.pravatar.cc/150?img=14",
     "shortInfo": "Backend developer specializing in microservices architecture.",
+    "summary": "Backend developer at Deloitte with 5 years of experience in microservices, Kafka, and Spring Boot. Expert in event-driven architectures.",
     "companyName": "Deloitte",
     "yearsOfExperience": 5,
-    "skills": ["Java", "Spring Boot", "Kafka", "MongoDB", "Docker", "Kubernetes"],
+    "designation": "Backend Developer",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "MongoDB",
+      "Docker",
+      "Kubernetes"
+    ],
     "projects": [
       {
         "projectName": "Payment Gateway Service",
+        "year": 2021,
         "whatHaveDone": "Built microservices for payment processing with Kafka integration.",
         "roleAndResponsibility": "Backend Developer - Implemented event-driven architecture.",
+        "designation": "Backend Developer",
         "skills": ["Java", "Spring Boot", "Kafka", "MongoDB"]
+      },
+      {
+        "projectName": "Inventory Management Microservices",
+        "year": 2023,
+        "whatHaveDone": "Developed distributed inventory tracking system using Kafka and MongoDB.",
+        "roleAndResponsibility": "Backend Developer - Designed microservices and event streaming logic.",
+        "designation": "Backend Developer",
+        "skills": ["Java", "Spring Boot", "Kafka", "MongoDB", "Docker"]
+      },
+      {
+        "projectName": "Order Fulfillment System",
+        "year": 2022,
+        "whatHaveDone": "Implemented microservices for order processing and fulfillment with event sourcing.",
+        "roleAndResponsibility": "Backend Developer - Developed event-driven workflows and data models.",
+        "designation": "Backend Developer",
+        "skills": ["Java", "Spring Boot", "Kafka", "MongoDB"]
+      },
+      {
+        "projectName": "User Notification Service",
+        "year": 2023,
+        "whatHaveDone": "Built a notification microservice using Kafka for real-time alerts.",
+        "roleAndResponsibility": "Backend Developer - Integrated with user management and messaging systems.",
+        "designation": "Backend Developer",
+        "skills": ["Java", "Spring Boot", "Kafka", "Docker"]
+      },
+      {
+        "projectName": "Audit Logging Microservice",
+        "year": 2021,
+        "whatHaveDone": "Developed a microservice for centralized audit logging and reporting.",
+        "roleAndResponsibility": "Backend Developer - Designed logging schema and implemented REST endpoints.",
+        "designation": "Backend Developer",
+        "skills": ["Java", "Spring Boot", "MongoDB", "Docker"]
       }
     ]
   },
   {
     "id": 4,
     "username": "Vikas Mehta",
+    "email": "vikas.mehta@infosys.com",
+    "contactNumber": "+91-9090909090",
     "image": "https://i.pravatar.cc/150?img=15",
     "shortInfo": "Data engineer with strong skills in big data and pipelines.",
+    "summary": "Data engineer at Infosys with 6 years of experience in Python, Spark, and AWS. Expert in scalable ETL and data lake solutions.",
     "companyName": "Infosys",
     "yearsOfExperience": 6,
+    "designation": "Data Engineer",
     "skills": ["Python", "Spark", "Hadoop", "Airflow", "AWS", "ETL"],
     "projects": [
       {
         "projectName": "Sales Data Lake",
+        "year": 2020,
         "whatHaveDone": "Developed scalable ETL pipelines for structured and unstructured data.",
         "roleAndResponsibility": "Data Engineer - Designed data ingestion and transformation flows.",
+        "designation": "Data Engineer",
         "skills": ["Python", "Spark", "Airflow", "AWS"]
+      },
+      {
+        "projectName": "Real-time Analytics Pipeline",
+        "year": 2022,
+        "whatHaveDone": "Built real-time analytics pipeline for streaming sales data using Spark Streaming.",
+        "roleAndResponsibility": "Data Engineer - Implemented data processing and dashboard integration.",
+        "designation": "Data Engineer",
+        "skills": ["Python", "Spark Streaming", "AWS", "Kafka"]
+      },
+      {
+        "projectName": "Customer Segmentation Engine",
+        "year": 2021,
+        "whatHaveDone": "Developed machine learning pipelines for customer segmentation.",
+        "roleAndResponsibility": "Data Engineer - Built ETL flows and integrated ML models.",
+        "designation": "Data Engineer",
+        "skills": ["Python", "Spark", "AWS", "Airflow"]
+      },
+      {
+        "projectName": "Data Quality Monitoring",
+        "year": 2023,
+        "whatHaveDone": "Implemented automated data quality checks and reporting for ETL pipelines.",
+        "roleAndResponsibility": "Data Engineer - Developed monitoring scripts and dashboards.",
+        "designation": "Data Engineer",
+        "skills": ["Python", "Airflow", "AWS"]
+      },
+      {
+        "projectName": "ETL Migration to Cloud",
+        "year": 2022,
+        "whatHaveDone": "Migrated legacy ETL workflows to AWS Glue and S3.",
+        "roleAndResponsibility": "Data Engineer - Refactored ETL logic and optimized cloud storage.",
+        "designation": "Data Engineer",
+        "skills": ["Python", "AWS Glue", "S3", "ETL"]
       }
     ]
   },
   {
     "id": 5,
     "username": "Priya Sharma",
+    "email": "priya.sharma@microsoft.com",
+    "contactNumber": "+91-9876501234",
     "image": "https://i.pravatar.cc/150?img=16",
     "shortInfo": "UI/UX engineer creating intuitive and accessible interfaces.",
+    "summary": "UI/UX engineer at Microsoft with 4 years of experience in React.js and accessibility. Skilled in Figma and TailwindCSS.",
     "companyName": "Microsoft",
     "yearsOfExperience": 4,
-    "skills": ["React.js", "Figma", "TailwindCSS", "Accessibility", "JavaScript", "Storybook"],
+    "designation": "UI/UX Engineer",
+    "skills": [
+      "React.js",
+      "Figma",
+      "TailwindCSS",
+      "Accessibility",
+      "JavaScript",
+      "Storybook"
+    ],
     "projects": [
       {
         "projectName": "Accessibility Compliance Tool",
+        "year": 2022,
         "whatHaveDone": "Ensured WCAG compliance across enterprise applications.",
         "roleAndResponsibility": "UI Engineer - Created reusable components and accessibility checks.",
+        "designation": "UI Engineer",
         "skills": ["React.js", "Storybook", "TailwindCSS"]
+      },
+      {
+        "projectName": "Design System Library",
+        "year": 2023,
+        "whatHaveDone": "Developed a reusable design system for Microsoft web apps using Figma and Storybook.",
+        "roleAndResponsibility": "UI/UX Engineer - Led component design and documentation.",
+        "designation": "UI/UX Engineer",
+        "skills": ["Figma", "React.js", "Storybook", "TailwindCSS"]
+      },
+      {
+        "projectName": "User Profile Editor",
+        "year": 2021,
+        "whatHaveDone": "Designed and implemented a user profile editor with live preview and accessibility features.",
+        "roleAndResponsibility": "UI/UX Engineer - Built interactive forms and preview components.",
+        "designation": "UI/UX Engineer",
+        "skills": ["React.js", "TailwindCSS", "Accessibility"]
+      },
+      {
+        "projectName": "Feedback Survey Platform",
+        "year": 2022,
+        "whatHaveDone": "Created a platform for collecting and visualizing user feedback.",
+        "roleAndResponsibility": "UI/UX Engineer - Designed survey flows and data visualization.",
+        "designation": "UI/UX Engineer",
+        "skills": ["React.js", "Figma", "JavaScript"]
+      },
+      {
+        "projectName": "Mobile App Design Kit",
+        "year": 2023,
+        "whatHaveDone": "Developed a design kit for mobile apps with reusable components and accessibility guidelines.",
+        "roleAndResponsibility": "UI/UX Engineer - Led design and documentation efforts.",
+        "designation": "UI/UX Engineer",
+        "skills": ["Figma", "React.js", "TailwindCSS"]
       }
     ]
   },
   {
     "id": 6,
     "username": "Arjun Verma",
+    "email": "arjun.verma@amazon.com",
+    "contactNumber": "+91-9001234567",
     "image": "https://i.pravatar.cc/150?img=17",
     "shortInfo": "Cloud engineer with expertise in AWS and serverless solutions.",
+    "summary": "Cloud engineer at Amazon with 7 years of experience in AWS Lambda and serverless architectures. Skilled in CI/CD and infrastructure as code.",
     "companyName": "Amazon",
     "yearsOfExperience": 7,
+    "designation": "Cloud Engineer",
     "skills": ["AWS Lambda", "API Gateway", "DynamoDB", "Node.js", "Terraform"],
     "projects": [
       {
         "projectName": "Order Processing System",
+        "year": 2023,
         "whatHaveDone": "Designed event-driven serverless architecture for order workflows.",
         "roleAndResponsibility": "Cloud Engineer - Managed CI/CD and infrastructure as code.",
+        "designation": "Cloud Engineer",
         "skills": ["AWS Lambda", "Node.js", "Terraform"]
+      },
+      {
+        "projectName": "Inventory Notification Service",
+        "year": 2022,
+        "whatHaveDone": "Implemented serverless notification system for inventory updates using AWS SNS and Lambda.",
+        "roleAndResponsibility": "Cloud Engineer - Developed Lambda functions and API Gateway integration.",
+        "designation": "Cloud Engineer",
+        "skills": ["AWS Lambda", "API Gateway", "SNS", "Node.js"]
+      },
+      {
+        "projectName": "User Authentication Service",
+        "year": 2021,
+        "whatHaveDone": "Built a serverless authentication service using AWS Cognito and Lambda.",
+        "roleAndResponsibility": "Cloud Engineer - Integrated Cognito with API Gateway and Lambda.",
+        "designation": "Cloud Engineer",
+        "skills": ["AWS Lambda", "API Gateway", "Cognito", "Node.js"]
+      },
+      {
+        "projectName": "Serverless Image Processing",
+        "year": 2022,
+        "whatHaveDone": "Developed image processing workflows using Lambda and S3 triggers.",
+        "roleAndResponsibility": "Cloud Engineer - Automated image resizing and storage.",
+        "designation": "Cloud Engineer",
+        "skills": ["AWS Lambda", "S3", "Node.js"]
+      },
+      {
+        "projectName": "Cost Optimization Dashboard",
+        "year": 2023,
+        "whatHaveDone": "Created a dashboard for monitoring and optimizing AWS resource costs.",
+        "roleAndResponsibility": "Cloud Engineer - Built data aggregation and visualization logic.",
+        "designation": "Cloud Engineer",
+        "skills": ["AWS Lambda", "DynamoDB", "Node.js"]
       }
     ]
   },
   {
     "id": 7,
     "username": "Neha Gupta",
+    "email": "neha.gupta@flipkart.com",
+    "contactNumber": "+91-8888888888",
     "image": "https://i.pravatar.cc/150?img=18",
     "shortInfo": "Mobile developer focused on cross-platform apps.",
+    "summary": "Mobile developer at Flipkart with 3 years of experience in React Native and Expo. Expert in push notifications and deep linking.",
     "companyName": "Flipkart",
     "yearsOfExperience": 3,
+    "designation": "Mobile Developer",
     "skills": ["React Native", "Expo", "TypeScript", "Redux", "Firebase"],
     "projects": [
       {
         "projectName": "E-commerce Shopping App",
+        "year": 2022,
         "whatHaveDone": "Built mobile application for order browsing, cart, and checkout.",
         "roleAndResponsibility": "Mobile Developer - Implemented push notifications and deep linking.",
+        "designation": "Mobile Developer",
         "skills": ["React Native", "Redux", "Firebase"]
+      },
+      {
+        "projectName": "Customer Loyalty App",
+        "year": 2023,
+        "whatHaveDone": "Developed cross-platform app for loyalty rewards and offers using Expo.",
+        "roleAndResponsibility": "Mobile Developer - Integrated Firebase for authentication and notifications.",
+        "designation": "Mobile Developer",
+        "skills": ["React Native", "Expo", "Firebase", "TypeScript"]
+      },
+      {
+        "projectName": "Delivery Tracking App",
+        "year": 2021,
+        "whatHaveDone": "Created a mobile app for real-time delivery tracking and notifications.",
+        "roleAndResponsibility": "Mobile Developer - Integrated maps and push notifications.",
+        "designation": "Mobile Developer",
+        "skills": ["React Native", "Expo", "Firebase"]
+      },
+      {
+        "projectName": "In-App Chat Feature",
+        "year": 2022,
+        "whatHaveDone": "Implemented in-app chat for customer support using Firebase.",
+        "roleAndResponsibility": "Mobile Developer - Developed chat UI and backend integration.",
+        "designation": "Mobile Developer",
+        "skills": ["React Native", "Firebase", "TypeScript"]
+      },
+      {
+        "projectName": "Promo Code Redemption App",
+        "year": 2023,
+        "whatHaveDone": "Built a mobile app for redeeming promo codes and tracking offers.",
+        "roleAndResponsibility": "Mobile Developer - Developed code validation and offer tracking logic.",
+        "designation": "Mobile Developer",
+        "skills": ["React Native", "Expo", "Redux"]
       }
     ]
   },
   {
     "id": 8,
     "username": "Amit Raj",
+    "email": "amit.raj@tcs.com",
+    "contactNumber": "+91-7777777777",
     "image": "https://i.pravatar.cc/150?img=19",
     "shortInfo": "DevOps engineer with automation and CI/CD expertise.",
+    "summary": "DevOps engineer at TCS with 6 years of experience in Jenkins, Docker, and Kubernetes. Skilled in automation and monitoring.",
     "companyName": "TCS",
     "yearsOfExperience": 6,
+    "designation": "DevOps Engineer",
     "skills": ["Jenkins", "Docker", "Kubernetes", "Ansible", "Linux", "AWS"],
     "projects": [
       {
         "projectName": "CI/CD Pipeline Automation",
+        "year": 2021,
         "whatHaveDone": "Automated builds, deployments, and monitoring with Kubernetes.",
         "roleAndResponsibility": "DevOps Engineer - Integrated automated testing and monitoring.",
+        "designation": "DevOps Engineer",
         "skills": ["Jenkins", "Docker", "Kubernetes", "Ansible"]
+      },
+      {
+        "projectName": "Infrastructure Monitoring System",
+        "year": 2022,
+        "whatHaveDone": "Set up centralized monitoring and alerting using Prometheus and Grafana.",
+        "roleAndResponsibility": "DevOps Engineer - Automated infrastructure health checks and reporting.",
+        "designation": "DevOps Engineer",
+        "skills": ["Prometheus", "Grafana", "Docker", "Kubernetes"]
+      },
+      {
+        "projectName": "Container Security Automation",
+        "year": 2023,
+        "whatHaveDone": "Implemented automated container security scans in CI/CD pipelines.",
+        "roleAndResponsibility": "DevOps Engineer - Integrated security tools and reporting.",
+        "designation": "DevOps Engineer",
+        "skills": ["Jenkins", "Docker", "Kubernetes", "Linux"]
+      },
+      {
+        "projectName": "Cloud Resource Provisioning",
+        "year": 2022,
+        "whatHaveDone": "Automated cloud resource provisioning using Terraform and Ansible.",
+        "roleAndResponsibility": "DevOps Engineer - Developed infrastructure as code scripts.",
+        "designation": "DevOps Engineer",
+        "skills": ["Terraform", "Ansible", "AWS"]
+      },
+      {
+        "projectName": "Log Aggregation Platform",
+        "year": 2021,
+        "whatHaveDone": "Built a centralized log aggregation and analysis platform using ELK stack.",
+        "roleAndResponsibility": "DevOps Engineer - Set up log shipping and dashboarding.",
+        "designation": "DevOps Engineer",
+        "skills": ["Elasticsearch", "Logstash", "Kibana", "Docker"]
       }
     ]
   },
   {
     "id": 9,
     "username": "Sneha Malhotra",
+    "email": "sneha.malhotra@adobe.com",
+    "contactNumber": "+91-6666666666",
     "image": "https://i.pravatar.cc/150?img=20",
     "shortInfo": "Frontend developer creating performant SPAs.",
+    "summary": "Frontend developer at Adobe with 5 years of experience in React.js and Vue.js. Expert in GraphQL and SPA performance.",
     "companyName": "Adobe",
     "yearsOfExperience": 5,
+    "designation": "Frontend Developer",
     "skills": ["React.js", "Vue.js", "TypeScript", "GraphQL", "Sass"],
     "projects": [
       {
         "projectName": "Creative Suite Dashboard",
+        "year": 2023,
         "whatHaveDone": "Developed dashboard to manage Adobe Creative Suite subscriptions.",
         "roleAndResponsibility": "Frontend Developer - Implemented GraphQL queries and UI components.",
+        "designation": "Frontend Developer",
         "skills": ["React.js", "GraphQL", "TypeScript"]
+      },
+      {
+        "projectName": "Performance Analytics SPA",
+        "year": 2022,
+        "whatHaveDone": "Built single-page application for real-time performance analytics using Vue.js and GraphQL.",
+        "roleAndResponsibility": "Frontend Developer - Optimized SPA performance and data fetching.",
+        "designation": "Frontend Developer",
+        "skills": ["Vue.js", "GraphQL", "TypeScript", "Sass"]
+      },
+      {
+        "projectName": "User Profile Management",
+        "year": 2021,
+        "whatHaveDone": "Created SPA for user profile management and settings.",
+        "roleAndResponsibility": "Frontend Developer - Built forms and integrated GraphQL APIs.",
+        "designation": "Frontend Developer",
+        "skills": ["React.js", "GraphQL", "TypeScript"]
+      },
+      {
+        "projectName": "Theme Customization Tool",
+        "year": 2022,
+        "whatHaveDone": "Developed a tool for customizing themes and styles in SPAs.",
+        "roleAndResponsibility": "Frontend Developer - Implemented dynamic styling and preview features.",
+        "designation": "Frontend Developer",
+        "skills": ["Vue.js", "Sass", "TypeScript"]
+      },
+      {
+        "projectName": "Real-time Collaboration SPA",
+        "year": 2023,
+        "whatHaveDone": "Built a real-time collaboration platform for document editing.",
+        "roleAndResponsibility": "Frontend Developer - Integrated WebSocket and optimized UI performance.",
+        "designation": "Frontend Developer",
+        "skills": ["React.js", "WebSocket", "TypeScript"]
       }
     ]
   },
   {
     "id": 10,
     "username": "Rohan Yadav",
+    "email": "rohan.yadav@google.com",
+    "contactNumber": "+91-9999999999",
     "image": "https://i.pravatar.cc/150?img=21",
     "shortInfo": "Software engineer skilled in API design and integration.",
+    "summary": "Software engineer at Google with 8 years of experience in Go and Java. Expert in REST API and gRPC integration.",
     "companyName": "Google",
     "yearsOfExperience": 8,
+    "designation": "Software Engineer",
     "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
     "projects": [
       {
         "projectName": "Global Messaging Platform",
+        "year": 2022,
         "whatHaveDone": "Developed scalable APIs for real-time messaging.",
         "roleAndResponsibility": "Software Engineer - Designed REST and gRPC endpoints.",
+        "designation": "Software Engineer",
         "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
+      },
+      {
+        "projectName": "API Gateway Service",
+        "year": 2023,
+        "whatHaveDone": "Implemented centralized API gateway for microservices with authentication and rate limiting.",
+        "roleAndResponsibility": "Software Engineer - Developed gateway logic and integrated with backend services.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs", "gRPC"]
+      },
+      {
+        "projectName": "User Analytics Microservice",
+        "year": 2021,
+        "whatHaveDone": "Built a microservice for collecting and analyzing user analytics data.",
+        "roleAndResponsibility": "Software Engineer - Designed REST APIs and data models.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs", "SQL"]
+      },
+      {
+        "projectName": "OAuth2 Authentication Service",
+        "year": 2022,
+        "whatHaveDone": "Implemented OAuth2 authentication and token management for APIs.",
+        "roleAndResponsibility": "Software Engineer - Developed authentication flows and integrated with gateway.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs"]
+      },
+      {
+        "projectName": "Cloud Spanner Migration Tool",
+        "year": 2023,
+        "whatHaveDone": "Developed a tool for migrating SQL databases to Google Cloud Spanner.",
+        "roleAndResponsibility": "Software Engineer - Built migration logic and data validation scripts.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "SQL", "Cloud Spanner"]
       }
     ]
   }
