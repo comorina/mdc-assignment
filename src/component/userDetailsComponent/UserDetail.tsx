@@ -16,34 +16,20 @@ import {
   UserNameContainer,
 } from "./UserDetail.style";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { Chip, Divider } from "@mui/material";
 
 function UserDetail() {
-  const paramID = useParams().id;
-  const reduxUserDetail: UserDetail | undefined = useSelector(
+  const { id } = useParams();
+  const numericId = Number(id);
+
+  const userDetail = useSelector(
     (state: UserDetailDataModel) =>
-      state?.userData?.userDetail.find((user) => user.id === Number(paramID))
-  );
-  const [userDetail, setUserDetail] = useState<UserDetail | undefined>(
-    reduxUserDetail
+      state.userData.userDetail.find(u => u.id === numericId)
   );
 
-  useEffect(() => {
-    if (!reduxUserDetail) {
-      const data = localStorage.getItem("userDetails");
-      if (data) {
-        const parsedData = JSON.parse(data);
-        const foundUser = parsedData.find(
-          (user: UserDetail) => user.id === Number(paramID)
-        );
-        setUserDetail(foundUser);
-        console.log("parsedData", parsedData);
-      }
-    } else {
-      setUserDetail(reduxUserDetail);
-    }
-  }, [reduxUserDetail, paramID]);
+  if (!userDetail) {
+    return <UserDetailContainer>Loading...</UserDetailContainer>;
+  }
 
   return (
     <UserDetailContainer>

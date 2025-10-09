@@ -1,55 +1,66 @@
-import { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import ProfileCard from "../pofileCardComponent/ProfileCard";
 import { DashboardContainer } from "./dashboard.style";
-import { useSelector } from "react-redux";
-
-type Project = {
-  projectName: string;
-  whatHaveDone: string;
-  roleAndResponsibility: string;
-  skills: string[];
-};
-
-type User = {
-  id: number;
-  username: string;
-  shortInfo: string;
-  companyName: string;
-  yearsOfExperience: number;
-  skills: string[];
-  projects: Project[];
-  image: string;
-};
-
-type Users = User[];
-interface RootState {
-  userData: {
-    userDetail: Users;
-  };
-}
+import { shallowEqual, useSelector } from "react-redux";
+import type {
+  UserDetail,
+  UserDetailDataModel,
+} from "../../dataModel/userDetailDataModel";
+import { Box, Button } from "@mui/material";
+import AddNewUserDialog from "../dialogBox/addNewUSerDialogBox/addNewUser";
 
 function Dashboard() {
-  const reduxData = useSelector((state: RootState) => state?.userData?.userDetail);
-  const [data, setData] = useState<Users>(reduxData ?? []);
+  const [openDailog, setOpenDialog] = useState(false);
+  const users = useSelector(
+    (state: UserDetailDataModel) => state.userData.userDetail,
+    shallowEqual
+  );
 
-  useEffect(() => {
-    if (!reduxData || reduxData.length === 0) {
-      const localData = localStorage.getItem("userDetails");
-      if (localData) {
-        setData(JSON.parse(localData));
+  const effectiveUsers = useMemo(() => {
+    if (users.length > 0) return users;
+    const cached = localStorage.getItem("userDetails");
+    if (cached) {
+      try {
+        const parsed = JSON.parse(cached);
+        return Array.isArray(parsed) ? (parsed as UserDetail[]) : [];
+      } catch {
+        return [];
       }
-    } else {
-      setData(reduxData);
     }
-  }, [reduxData]);
+    return [];
+  }, [users]);
+
+  if (effectiveUsers.length === 0) {
+    return <DashboardContainer>Loading...</DashboardContainer>;
+  }
 
   return (
-    <DashboardContainer sx={{}}>
-      {data?.map((user) => (
-        <ProfileCard key={user.id} userData={user} />
-      ))}
-    </DashboardContainer>
+    <>
+      {openDailog &&<AddNewUserDialog
+        open={openDailog}
+        editingUser={undefined}
+        onClose={() => setOpenDialog(false)}
+      />}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          paddingTop: "20px",
+          paddingRight: "20px",
+        }}
+      >
+        <Button variant="contained" onClick={() => setOpenDialog(!openDailog)}>
+          {" "}
+          Create User
+        </Button>
+      </Box>
+      <DashboardContainer>
+        {users?.map((user) => (
+          <ProfileCard key={user.id} userData={user} />
+        ))}
+      </DashboardContainer>
+    </>
   );
 }
 
-export default Dashboard;
+export default React.memo(Dashboard);

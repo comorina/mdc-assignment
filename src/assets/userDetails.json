@@ -21,6 +21,7 @@
     ],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Agile Work Estimation Tool",
         "year": 2022,
         "whatHaveDone": "Developed backend services and integrated with frontend for real-time team estimations.",
@@ -29,6 +30,7 @@
         "skills": ["Java", "Spring Boot", "MySQL", "JWT", "Agile"]
       },
       {
+        "projectId": 2,
         "projectName": "Poker-style Work Estimation Tool",
         "year": 2023,
         "whatHaveDone": "Designed and implemented the backend services that power a real-time, poker-style estimation tool. Implemented room/session management, unique link generation for participants, vote collection, result aggregation, and reconnection handling.",
@@ -45,6 +47,7 @@
         ]
       },
       {
+        "projectId": 3,
         "projectName": "Microservices Authentication & Authorization Gateway",
         "year": 2024,
         "whatHaveDone": "Built a centralized authentication service and API Gateway that authenticates users once and enforces role-based access across multiple microservices. Implemented JWT issuance/validation, token refresh, and privilege-based routing at the gateway to keep downstream services stateless.",
@@ -62,6 +65,7 @@
         ]
       },
       {
+        "projectId": 4,
         "projectName": "Document Collaboration Platform",
         "year": 2021,
         "whatHaveDone": "Implemented real-time document editing and sharing features using WebSocket and REST APIs.",
@@ -70,6 +74,7 @@
         "skills": ["Java", "Spring Boot", "React.js", "WebSocket", "MongoDB"]
       },
       {
+        "projectId": 5,
         "projectName": "Task Management System",
         "year": 2020,
         "whatHaveDone": "Developed a web-based task management system with user authentication and role-based access.",
@@ -78,6 +83,7 @@
         "skills": ["Java", "Spring Boot", "React.js", "JWT", "MySQL"]
       },
       {
+        "projectId": 6,
         "projectName": "Employee Feedback Portal",
         "year": 2022,
         "whatHaveDone": "Created a portal for collecting and analyzing employee feedback using charts and dashboards.",
@@ -86,6 +92,7 @@
         "skills": ["Java", "Spring Boot", "React.js", "Redux", "Chart.js"]
       },
       {
+        "projectId": 7,
         "projectName": "API Rate Limiting Service",
         "year": 2023,
         "whatHaveDone": "Implemented a microservice for API rate limiting and monitoring using Redis.",
@@ -116,6 +123,7 @@
     ],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Customer Onboarding Portal",
         "year": 2023,
         "whatHaveDone": "Developed dynamic forms with validations and API integrations.",
@@ -124,6 +132,7 @@
         "skills": ["React.js", "Redux Toolkit", "TypeScript"]
       },
       {
+        "projectId": 2,
         "projectName": "Employee Dashboard",
         "year": 2022,
         "whatHaveDone": "Created a responsive dashboard for employee performance tracking and analytics.",
@@ -132,6 +141,7 @@
         "skills": ["React.js", "Next.js", "TypeScript", "Chart.js"]
       },
       {
+        "projectId": 3,
         "projectName": "Product Catalog SPA",
         "year": 2021,
         "whatHaveDone": "Built a single-page application for product catalog browsing and filtering.",
@@ -140,6 +150,7 @@
         "skills": ["React.js", "Redux Toolkit", "TypeScript", "CSS3"]
       },
       {
+        "projectId": 4,
         "projectName": "Feedback Collection Widget",
         "year": 2022,
         "whatHaveDone": "Created an embeddable feedback widget for collecting user reviews.",
@@ -148,6 +159,7 @@
         "skills": ["React.js", "TypeScript", "HTML5"]
       },
       {
+        "projectId": 5,
         "projectName": "Admin Panel for CMS",
         "year": 2023,
         "whatHaveDone": "Developed an admin panel for content management with role-based access.",
@@ -178,6 +190,7 @@
     ],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Payment Gateway Service",
         "year": 2021,
         "whatHaveDone": "Built microservices for payment processing with Kafka integration.",
@@ -186,6 +199,7 @@
         "skills": ["Java", "Spring Boot", "Kafka", "MongoDB"]
       },
       {
+        "projectId": 2,
         "projectName": "Inventory Management Microservices",
         "year": 2023,
         "whatHaveDone": "Developed distributed inventory tracking system using Kafka and MongoDB.",
@@ -194,6 +208,7 @@
         "skills": ["Java", "Spring Boot", "Kafka", "MongoDB", "Docker"]
       },
       {
+        "projectId": 3,
         "projectName": "Order Fulfillment System",
         "year": 2022,
         "whatHaveDone": "Implemented microservices for order processing and fulfillment with event sourcing.",
@@ -202,6 +217,7 @@
         "skills": ["Java", "Spring Boot", "Kafka", "MongoDB"]
       },
       {
+        "projectId": 4,
         "projectName": "User Notification Service",
         "year": 2023,
         "whatHaveDone": "Built a notification microservice using Kafka for real-time alerts.",
@@ -210,6 +226,7 @@
         "skills": ["Java", "Spring Boot", "Kafka", "Docker"]
       },
       {
+        "projectId": 5,
         "projectName": "Audit Logging Microservice",
         "year": 2021,
         "whatHaveDone": "Developed a microservice for centralized audit logging and reporting.",
@@ -233,6 +250,7 @@
     "skills": ["Python", "Spark", "Hadoop", "Airflow", "AWS", "ETL"],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Sales Data Lake",
         "year": 2020,
         "whatHaveDone": "Developed scalable ETL pipelines for structured and unstructured data.",
@@ -241,6 +259,7 @@
         "skills": ["Python", "Spark", "Airflow", "AWS"]
       },
       {
+        "projectId": 2,
         "projectName": "Real-time Analytics Pipeline",
         "year": 2022,
         "whatHaveDone": "Built real-time analytics pipeline for streaming sales data using Spark Streaming.",
@@ -249,6 +268,7 @@
         "skills": ["Python", "Spark Streaming", "AWS", "Kafka"]
       },
       {
+        "projectId": 3,
         "projectName": "Customer Segmentation Engine",
         "year": 2021,
         "whatHaveDone": "Developed machine learning pipelines for customer segmentation.",
@@ -257,6 +277,7 @@
         "skills": ["Python", "Spark", "AWS", "Airflow"]
       },
       {
+        "projectId": 4,
         "projectName": "Data Quality Monitoring",
         "year": 2023,
         "whatHaveDone": "Implemented automated data quality checks and reporting for ETL pipelines.",
@@ -265,6 +286,7 @@
         "skills": ["Python", "Airflow", "AWS"]
       },
       {
+        "projectId": 5,
         "projectName": "ETL Migration to Cloud",
         "year": 2022,
         "whatHaveDone": "Migrated legacy ETL workflows to AWS Glue and S3.",
@@ -295,6 +317,7 @@
     ],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Accessibility Compliance Tool",
         "year": 2022,
         "whatHaveDone": "Ensured WCAG compliance across enterprise applications.",
@@ -303,6 +326,7 @@
         "skills": ["React.js", "Storybook", "TailwindCSS"]
       },
       {
+        "projectId": 2,
         "projectName": "Design System Library",
         "year": 2023,
         "whatHaveDone": "Developed a reusable design system for Microsoft web apps using Figma and Storybook.",
@@ -311,6 +335,7 @@
         "skills": ["Figma", "React.js", "Storybook", "TailwindCSS"]
       },
       {
+        "projectId": 3,
         "projectName": "User Profile Editor",
         "year": 2021,
         "whatHaveDone": "Designed and implemented a user profile editor with live preview and accessibility features.",
@@ -319,6 +344,7 @@
         "skills": ["React.js", "TailwindCSS", "Accessibility"]
       },
       {
+        "projectId": 4,
         "projectName": "Feedback Survey Platform",
         "year": 2022,
         "whatHaveDone": "Created a platform for collecting and visualizing user feedback.",
@@ -327,6 +353,7 @@
         "skills": ["React.js", "Figma", "JavaScript"]
       },
       {
+        "projectId": 5,
         "projectName": "Mobile App Design Kit",
         "year": 2023,
         "whatHaveDone": "Developed a design kit for mobile apps with reusable components and accessibility guidelines.",
@@ -350,6 +377,7 @@
     "skills": ["AWS Lambda", "API Gateway", "DynamoDB", "Node.js", "Terraform"],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Order Processing System",
         "year": 2023,
         "whatHaveDone": "Designed event-driven serverless architecture for order workflows.",
@@ -358,6 +386,7 @@
         "skills": ["AWS Lambda", "Node.js", "Terraform"]
       },
       {
+        "projectId": 2,
         "projectName": "Inventory Notification Service",
         "year": 2022,
         "whatHaveDone": "Implemented serverless notification system for inventory updates using AWS SNS and Lambda.",
@@ -366,6 +395,7 @@
         "skills": ["AWS Lambda", "API Gateway", "SNS", "Node.js"]
       },
       {
+        "projectId": 3,
         "projectName": "User Authentication Service",
         "year": 2021,
         "whatHaveDone": "Built a serverless authentication service using AWS Cognito and Lambda.",
@@ -374,6 +404,7 @@
         "skills": ["AWS Lambda", "API Gateway", "Cognito", "Node.js"]
       },
       {
+        "projectId": 4,
         "projectName": "Serverless Image Processing",
         "year": 2022,
         "whatHaveDone": "Developed image processing workflows using Lambda and S3 triggers.",
@@ -382,6 +413,7 @@
         "skills": ["AWS Lambda", "S3", "Node.js"]
       },
       {
+        "projectId": 5,
         "projectName": "Cost Optimization Dashboard",
         "year": 2023,
         "whatHaveDone": "Created a dashboard for monitoring and optimizing AWS resource costs.",
@@ -405,6 +437,7 @@
     "skills": ["React Native", "Expo", "TypeScript", "Redux", "Firebase"],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "E-commerce Shopping App",
         "year": 2022,
         "whatHaveDone": "Built mobile application for order browsing, cart, and checkout.",
@@ -413,6 +446,7 @@
         "skills": ["React Native", "Redux", "Firebase"]
       },
       {
+        "projectId": 2,
         "projectName": "Customer Loyalty App",
         "year": 2023,
         "whatHaveDone": "Developed cross-platform app for loyalty rewards and offers using Expo.",
@@ -421,6 +455,7 @@
         "skills": ["React Native", "Expo", "Firebase", "TypeScript"]
       },
       {
+        "projectId": 3,
         "projectName": "Delivery Tracking App",
         "year": 2021,
         "whatHaveDone": "Created a mobile app for real-time delivery tracking and notifications.",
@@ -429,6 +464,7 @@
         "skills": ["React Native", "Expo", "Firebase"]
       },
       {
+        "projectId": 4,
         "projectName": "In-App Chat Feature",
         "year": 2022,
         "whatHaveDone": "Implemented in-app chat for customer support using Firebase.",
@@ -437,6 +473,7 @@
         "skills": ["React Native", "Firebase", "TypeScript"]
       },
       {
+        "projectId": 5,
         "projectName": "Promo Code Redemption App",
         "year": 2023,
         "whatHaveDone": "Built a mobile app for redeeming promo codes and tracking offers.",
@@ -460,6 +497,7 @@
     "skills": ["Jenkins", "Docker", "Kubernetes", "Ansible", "Linux", "AWS"],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "CI/CD Pipeline Automation",
         "year": 2021,
         "whatHaveDone": "Automated builds, deployments, and monitoring with Kubernetes.",
@@ -468,6 +506,7 @@
         "skills": ["Jenkins", "Docker", "Kubernetes", "Ansible"]
       },
       {
+        "projectId": 2,
         "projectName": "Infrastructure Monitoring System",
         "year": 2022,
         "whatHaveDone": "Set up centralized monitoring and alerting using Prometheus and Grafana.",
@@ -476,6 +515,7 @@
         "skills": ["Prometheus", "Grafana", "Docker", "Kubernetes"]
       },
       {
+        "projectId": 3,
         "projectName": "Container Security Automation",
         "year": 2023,
         "whatHaveDone": "Implemented automated container security scans in CI/CD pipelines.",
@@ -484,6 +524,7 @@
         "skills": ["Jenkins", "Docker", "Kubernetes", "Linux"]
       },
       {
+        "projectId": 4,
         "projectName": "Cloud Resource Provisioning",
         "year": 2022,
         "whatHaveDone": "Automated cloud resource provisioning using Terraform and Ansible.",
@@ -492,6 +533,7 @@
         "skills": ["Terraform", "Ansible", "AWS"]
       },
       {
+        "projectId": 5,
         "projectName": "Log Aggregation Platform",
         "year": 2021,
         "whatHaveDone": "Built a centralized log aggregation and analysis platform using ELK stack.",
@@ -515,6 +557,7 @@
     "skills": ["React.js", "Vue.js", "TypeScript", "GraphQL", "Sass"],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Creative Suite Dashboard",
         "year": 2023,
         "whatHaveDone": "Developed dashboard to manage Adobe Creative Suite subscriptions.",
@@ -523,6 +566,7 @@
         "skills": ["React.js", "GraphQL", "TypeScript"]
       },
       {
+        "projectId": 2,
         "projectName": "Performance Analytics SPA",
         "year": 2022,
         "whatHaveDone": "Built single-page application for real-time performance analytics using Vue.js and GraphQL.",
@@ -531,6 +575,7 @@
         "skills": ["Vue.js", "GraphQL", "TypeScript", "Sass"]
       },
       {
+        "projectId": 3,
         "projectName": "User Profile Management",
         "year": 2021,
         "whatHaveDone": "Created SPA for user profile management and settings.",
@@ -539,6 +584,7 @@
         "skills": ["React.js", "GraphQL", "TypeScript"]
       },
       {
+        "projectId": 4,
         "projectName": "Theme Customization Tool",
         "year": 2022,
         "whatHaveDone": "Developed a tool for customizing themes and styles in SPAs.",
@@ -547,6 +593,7 @@
         "skills": ["Vue.js", "Sass", "TypeScript"]
       },
       {
+        "projectId": 5,
         "projectName": "Real-time Collaboration SPA",
         "year": 2023,
         "whatHaveDone": "Built a real-time collaboration platform for document editing.",
@@ -570,6 +617,7 @@
     "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
     "projects": [
       {
+        "projectId": 1,
         "projectName": "Global Messaging Platform",
         "year": 2022,
         "whatHaveDone": "Developed scalable APIs for real-time messaging.",
@@ -578,6 +626,7 @@
         "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
       },
       {
+        "projectId": 2,
         "projectName": "API Gateway Service",
         "year": 2023,
         "whatHaveDone": "Implemented centralized API gateway for microservices with authentication and rate limiting.",
@@ -586,6 +635,7 @@
         "skills": ["Go", "Java", "REST APIs", "gRPC"]
       },
       {
+        "projectId": 3,
         "projectName": "User Analytics Microservice",
         "year": 2021,
         "whatHaveDone": "Built a microservice for collecting and analyzing user analytics data.",
@@ -594,6 +644,7 @@
         "skills": ["Go", "Java", "REST APIs", "SQL"]
       },
       {
+        "projectId": 4,
         "projectName": "OAuth2 Authentication Service",
         "year": 2022,
         "whatHaveDone": "Implemented OAuth2 authentication and token management for APIs.",
@@ -602,6 +653,127 @@
         "skills": ["Go", "Java", "REST APIs"]
       },
       {
+        "projectId": 5,
+        "projectName": "Cloud Spanner Migration Tool",
+        "year": 2023,
+        "whatHaveDone": "Developed a tool for migrating SQL databases to Google Cloud Spanner.",
+        "roleAndResponsibility": "Software Engineer - Built migration logic and data validation scripts.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "SQL", "Cloud Spanner"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "username": "Rohan Yadav",
+    "email": "rohan.yadav@google.com",
+    "contactNumber": "+91-9999999999",
+    "image": "https://i.pravatar.cc/150?img=22",
+    "shortInfo": "Software engineer skilled in API design and integration.",
+    "summary": "Software engineer at Google with 8 years of experience in Go and Java. Expert in REST API and gRPC integration.",
+    "companyName": "Google",
+    "yearsOfExperience": 8,
+    "designation": "Software Engineer",
+    "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
+    "projects": [
+      {
+        "projectId": 1,
+        "projectName": "Global Messaging Platform",
+        "year": 2022,
+        "whatHaveDone": "Developed scalable APIs for real-time messaging.",
+        "roleAndResponsibility": "Software Engineer - Designed REST and gRPC endpoints.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
+      },
+      {
+        "projectId": 2,
+        "projectName": "API Gateway Service",
+        "year": 2023,
+        "whatHaveDone": "Implemented centralized API gateway for microservices with authentication and rate limiting.",
+        "roleAndResponsibility": "Software Engineer - Developed gateway logic and integrated with backend services.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs", "gRPC"]
+      },
+      {
+        "projectId": 3,
+        "projectName": "User Analytics Microservice",
+        "year": 2021,
+        "whatHaveDone": "Built a microservice for collecting and analyzing user analytics data.",
+        "roleAndResponsibility": "Software Engineer - Designed REST APIs and data models.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs", "SQL"]
+      },
+      {
+        "projectId": 4,
+        "projectName": "OAuth2 Authentication Service",
+        "year": 2022,
+        "whatHaveDone": "Implemented OAuth2 authentication and token management for APIs.",
+        "roleAndResponsibility": "Software Engineer - Developed authentication flows and integrated with gateway.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs"]
+      },
+      {
+        "projectId": 5,
+        "projectName": "Cloud Spanner Migration Tool",
+        "year": 2023,
+        "whatHaveDone": "Developed a tool for migrating SQL databases to Google Cloud Spanner.",
+        "roleAndResponsibility": "Software Engineer - Built migration logic and data validation scripts.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "SQL", "Cloud Spanner"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "username": "Rohan Yadav",
+    "email": "rohan.yadav@google.com",
+    "contactNumber": "+91-9999999999",
+    "image": "https://i.pravatar.cc/150?img=23",
+    "shortInfo": "Software engineer skilled in API design and integration.",
+    "summary": "Software engineer at Google with 8 years of experience in Go and Java. Expert in REST API and gRPC integration.",
+    "companyName": "Google",
+    "yearsOfExperience": 8,
+    "designation": "Software Engineer",
+    "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
+    "projects": [
+      {
+        "projectId": 1,
+        "projectName": "Global Messaging Platform",
+        "year": 2022,
+        "whatHaveDone": "Developed scalable APIs for real-time messaging.",
+        "roleAndResponsibility": "Software Engineer - Designed REST and gRPC endpoints.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
+      },
+      {
+        "projectId": 2,
+        "projectName": "API Gateway Service",
+        "year": 2023,
+        "whatHaveDone": "Implemented centralized API gateway for microservices with authentication and rate limiting.",
+        "roleAndResponsibility": "Software Engineer - Developed gateway logic and integrated with backend services.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs", "gRPC"]
+      },
+      {
+        "projectId": 3,
+        "projectName": "User Analytics Microservice",
+        "year": 2021,
+        "whatHaveDone": "Built a microservice for collecting and analyzing user analytics data.",
+        "roleAndResponsibility": "Software Engineer - Designed REST APIs and data models.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs", "SQL"]
+      },
+      {
+        "projectId": 4,
+        "projectName": "OAuth2 Authentication Service",
+        "year": 2022,
+        "whatHaveDone": "Implemented OAuth2 authentication and token management for APIs.",
+        "roleAndResponsibility": "Software Engineer - Developed authentication flows and integrated with gateway.",
+        "designation": "Software Engineer",
+        "skills": ["Go", "Java", "REST APIs"]
+      },
+      {
+        "projectId": 5,
         "projectName": "Cloud Spanner Migration Tool",
         "year": 2023,
         "whatHaveDone": "Developed a tool for migrating SQL databases to Google Cloud Spanner.",

@@ -9,39 +9,36 @@ import {
 } from "@mui/material";
 import {
   AvatarWrapper,
+  CardFooter,
   CardMainContainer,
   CardStyled,
   SkillContainer,
   TopHeader,
 } from "./ProfileCard.style";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { removeUser } from "../../storeManagement/slices/userDetailsSlice";
+import { useDispatch } from "react-redux";
+import AddNewUserDialog from "../dialogBox/addNewUSerDialogBox/addNewUser";
+import type { UserDetail } from "../../dataModel/userDetailDataModel";
 
-type UserData = {
-  id: number;
-  username: string;
-  shortInfo: string;
-  companyName: string;
-  yearsOfExperience: number;
-  skills: string[];
-  image: string;
-  projects: {
-    projectName: string;
-    whatHaveDone: string;
-    roleAndResponsibility: string;
-    skills: string[];
-  }[];
-};
 
-interface ProfileCardProps {
-  userData: UserData;
-}
 
-function ProfileCard({ userData }: ProfileCardProps) {
+function ProfileCard({ userData }: { userData: UserDetail }) {
+  const [editOpen, setEditOpen] = useState(false);
   const navigate = useNavigate();
-  if (!userData) return <div>Loading...</div>;
+  const dispatch = useDispatch();
+
   function handleDetailsClick() {
     navigate(`/user/${userData.id}`);
   }
+
+  function handleDelete() {
+    if (confirm("Delete this user?")) {
+      dispatch(removeUser(userData.id));
+    }
+  }
+  if (!userData) return <div>Loading...</div>;
   return (
     <CardMainContainer>
       <CardStyled>
@@ -59,23 +56,45 @@ function ProfileCard({ userData }: ProfileCardProps) {
             {userData.username}
           </Typography>
           <Typography variant="body2" color="text.primary" sx={{ mb: 1 }}>
-            {userData.yearsOfExperience} years experience at {userData.companyName}
+            {userData.yearsOfExperience} years experience at{" "}
+            {userData.companyName}
           </Typography>
           <SkillContainer variant="body2" color="text.secondary" sx={{ mb: 2 }}>
             {userData.shortInfo}
           </SkillContainer>
-          <Stack direction="row" spacing={1} justifyContent="center" flexWrap="wrap" gap={1}>
+          <Stack
+            direction="row"
+            spacing={1}
+            justifyContent="center"
+            flexWrap="wrap"
+            gap={1}
+          >
             {userData.skills.map((skill) => (
               <Chip key={skill} label={skill} variant="outlined" />
             ))}
           </Stack>
         </CardContent>
-        <CardActions>
-          <Button size="small" onClick={handleDetailsClick}>Details</Button>
-        </CardActions>
+        <CardFooter>
+          <CardActions>
+            <Button size="small" onClick={handleDetailsClick}>
+              Details
+            </Button>
+            <Button size="small" onClick={() => setEditOpen(true)}>
+              Edit
+            </Button>
+            <Button size="small" color="error" onClick={handleDelete}>
+              Delete
+            </Button>
+          </CardActions>
+        </CardFooter>
       </CardStyled>
+      {editOpen && <AddNewUserDialog
+        open={editOpen}
+        onClose={() => setEditOpen(false)}
+        editingUser={userData} 
+      />}
     </CardMainContainer>
   );
 }
 
-export default ProfileCard;
+export default React.memo(ProfileCard);
