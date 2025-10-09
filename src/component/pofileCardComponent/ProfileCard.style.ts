@@ -15,13 +15,15 @@ export const TopHeader = styled(Box)(() => ({
   borderTopRightRadius: "8px",
 }));
 
-export const CardStyled = styled(Card)(() => ({
+export const CardStyled = styled(Card)({
   width: "100%",
   borderRadius: "8px",
   height: "100%",
   overflow: "visible",
   boxShadow: "0 12px 30px rgba(16,24,40,0.08), 0 2px 6px rgba(16,24,40,0.04)",
-}));
+  display: "flex",
+  flexDirection: "column",
+});
 
 export const AvatarWrapper = styled(Box)(() => ({
   display: "flex",
@@ -31,4 +33,12 @@ export const AvatarWrapper = styled(Box)(() => ({
 
 export const SkillContainer = styled(Typography)(() => ({
   width: "326px",
+}));
+
+export const CardFooter = styled(Box)(() => ({
+  display: "flex",
+  gap: 8,
+  padding: "8px 16px 16px",
+  justifyContent: "space-between",
+  marginTop: "auto",
 }));

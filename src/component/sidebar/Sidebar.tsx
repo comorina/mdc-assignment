@@ -1,96 +1,99 @@
+import React, { useMemo } from "react";
 import {
   BurggerIconContainer,
   HeaderTextContainer,
   SidebarContainer,
   SidebarHeader,
+  StyledListItemButton,
   UserListContainer,
+  
 } from "./Sidebar.styles";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import {
   IconButton,
   List,
   ListItem,
-  ListItemButton,
   ListItemText,
 } from "@mui/material";
 import Divider from "@mui/material/Divider";
-
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import type {
   UserDetail,
   UserDetailDataModel,
   userList,
 } from "../../dataModel/userDetailDataModel";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleSidebar } from "../../storeManagement/slices/sidebarToggleSlice";
 
 function Sidebar() {
-  let data: UserDetail[] = useSelector(
-    (state: UserDetailDataModel) => state?.userData?.userDetail
+  const dispatch = useDispatch();
+  const location = useLocation();
+
+  const collapsed = useSelector(
+    (state: { sideBarToggle: { collapsed: boolean } }) =>
+      state.sideBarToggle.collapsed
   );
-  let userList: userList[] = getUserList();
+  const data: UserDetail[] = useSelector(
+    (state: UserDetailDataModel) => state.userData.userDetail
+  );
 
-  function getUserList() {
-    const list: userList[] = [];
-    if (data.length === 0) {
-      const localData = localStorage.getItem("userDetails");
-      if (localData) {
-        data = JSON.parse(localData);
-      }
-    }
-    data.forEach((user) => {
-      list.push({ id: user.id, username: user.username });
-    });
-    return list;
-  }
+  const userList: userList[] = useMemo(
+    () => data.map(({ id, username }) => ({ id, username })),
+    [data]
+  );
 
-  useEffect(() => {
-    if (data.length > 0) {
-      localStorage.setItem("userList", JSON.stringify(data));
-    } else {
-      const localData = localStorage.getItem("userList");
-      userList = localData ? JSON.parse(localData) : [];
-      // If you need to use fallbackData, handle it here (e.g., dispatch to redux or set state)
-    }
-  }, [userList]);
-  console.log("userList", userList);
+  const handleToggle = () => {
+    dispatch(toggleSidebar());
+  };
+  const isDashboardActive = location.pathname === "/dashboard";
+  const isUserActive = (id: number) => location.pathname === `/user/${id}`;
 
   return (
-    <SidebarContainer>
+<SidebarContainer>
       <SidebarHeader>
-        <HeaderTextContainer>Sopra Steria</HeaderTextContainer>
+        {!collapsed && <HeaderTextContainer>Sopra Steria</HeaderTextContainer>}
         <BurggerIconContainer>
-          <IconButton aria-label="comment">
-            <MenuRoundedIcon />
+          <IconButton aria-label="toggle sidebar" onClick={handleToggle}>
+            <MenuRoundedIcon sx={{ color: "white" }} />
           </IconButton>
         </BurggerIconContainer>
       </SidebarHeader>
-      <UserListContainer>
-        <List sx={{ width: "100%" }}>
-          <ListItem key={"dashboard-view"}>
-            <ListItemButton component={NavLink} to="/dashboard" end>
-              <ListItemText primary="Dashboard" />
-            </ListItemButton>
-          </ListItem>
-          <Divider />
-          {userList.map((item) => {
-            return (
-              <>
-                <ListItem key={item.id}>
-                  <ListItemButton
-                    component={NavLink}
+
+      {!collapsed && (
+        <UserListContainer>
+          <List sx={{ width: "100%", py: 0 }}>
+            <ListItem disablePadding>
+              <StyledListItemButton
+                component={NavLink}  
+                to="/dashboard"
+                end
+                disableRipple
+                selected={isDashboardActive}
+              >
+                <ListItemText primary="Dashboard" />
+              </StyledListItemButton>
+            </ListItem>
+            <Divider sx={{ borderColor: "rgba(255,255,255,0.4)" }} />
+
+            {userList.map((item) => (
+              <React.Fragment key={item.id}>
+                <ListItem disablePadding>
+                  <StyledListItemButton
+                    component={NavLink} 
                     to={`/user/${item.id}`}
                     end
+                    disableRipple
+                    selected={isUserActive(item.id)}
                   >
                     <ListItemText primary={item.username} />
-                  </ListItemButton>
+                  </StyledListItemButton>
                 </ListItem>
-                <Divider />
-              </>
-            );
-          })}
-        </List>
-      </UserListContainer>
+                <Divider sx={{ borderColor: "rgba(255,255,255,0.25)" }} />
+              </React.Fragment>
+            ))}
+          </List>
+        </UserListContainer>
+      )}
     </SidebarContainer>
   );
 }

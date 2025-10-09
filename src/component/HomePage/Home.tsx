@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { HomeContainer } from "./Home.styles";
-import { Box, Drawer } from "@mui/material";
+import { Box } from "@mui/material";
 import Sidebar from "../sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 import { storeTheData } from "../../storeManagement/slices/userDetailsSlice";
@@ -9,8 +9,8 @@ import type { UserDetailDataModel } from "../../dataModel/userDetailDataModel";
 
 function Home() {
   const dispatch = useDispatch();
-  const userDetails = useSelector((state: UserDetailDataModel) => state.userData.userDetail); // adjust selector as needed
-console.log("Home Render")
+  const userDetails = useSelector((state: UserDetailDataModel) => state.userData.userDetail);
+  const collapsed = useSelector((state: { sideBarToggle: { collapsed: boolean } }) => state.sideBarToggle.collapsed);
   const getUserDataCallback = useCallback(() => {
     fetch("src/assets/userDetails.json", {
       method: "GET",
@@ -32,12 +32,13 @@ console.log("Home Render")
       }
     }
   }, [userDetails, getUserDataCallback, dispatch]);
+  console.log("home colapse ", collapsed )
 
   return (
-    <HomeContainer>
-      <Drawer variant="permanent" anchor="left">
+    <HomeContainer collapsed={collapsed}>
+      <Box sx={{ height: "100vh" }}>
         <Sidebar />
-      </Drawer>
+      </Box>
       <Box sx={{ width: "100%", height: "100vh", overflow: "auto" }}>
         <Outlet />
       </Box>
