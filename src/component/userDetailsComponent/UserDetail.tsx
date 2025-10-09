@@ -19,12 +19,12 @@ import { useParams } from "react-router-dom";
 import { Chip, Divider } from "@mui/material";
 
 function UserDetail() {
+  console.log("User Detail component rendered");
   const { id } = useParams();
   const numericId = Number(id);
 
-  const userDetail = useSelector(
-    (state: UserDetailDataModel) =>
-      state.userData.userDetail.find(u => u.id === numericId)
+  const userDetail = useSelector((state: UserDetailDataModel) =>
+    state.userData.userDetail.find((u) => u.id === numericId)
   );
 
   if (!userDetail) {
@@ -46,23 +46,24 @@ function UserDetail() {
       </UserImageContainer>
       <SummaryContainer>
         <SectionTitle>Summary</SectionTitle>
-        <Divider/>
+        <Divider />
         <Summary>{userDetail?.summary}</Summary>
       </SummaryContainer>
       {userDetail?.projects?.map((project: Projects) => (
         <ProjectContainer key={project?.id}>
           <ProjectTitle>{project?.projectName}</ProjectTitle>
-          <Divider/>
+          <Divider />
           <ProjectDetail>{project?.whatHaveDone}</ProjectDetail>
           <ProjectDetail>{project?.roleAndResponsibility}</ProjectDetail>
           <ProjectDetail>
-            <strong>Skills:</strong> {project?.skills.map((skill) => (
+            <strong>Skills:</strong>{" "}
+            {project?.skills.map((skill) => (
               <Chip
                 key={skill}
                 label={skill}
                 color="primary"
                 variant="outlined"
-                style={{ marginRight: "5px" }}
+                style={{ marginRight: "5px", border: "1px solid #E6E9EE" }}
               />
             ))}
           </ProjectDetail>

@@ -22,23 +22,24 @@ export const UserImageContainer = styled(Box)(() => ({
   justifyContent: "flex-start",
   alignItems: "center",
   overflow: "hidden",
-  backgroundColor: "#c9ebfb",
+  backgroundColor: "#DFF3FF",
 }));
 
 export const USerInfoContainer = styled(Box)(() => ({
   marginLeft: "20px",
-}))
+}));
 
 export const UserNameContainer = styled(Box)(() => ({
-  fontSize: "50px",
+  fontSize: "60px",
   fontWeight: "600",
   marginTop: "10px",
   color: "#3b3838ff",
+  fontStyle: "serif",
 }));
 
 export const UserEmailContainer = styled(Box)(() => ({
   fontSize: "20px",
-  color: "gray",
+  color: "#616161",
   marginTop: "5px",
 }));
 
@@ -51,6 +52,7 @@ export const SectionTitle = styled(Box)(() => ({
   fontWeight: "600",
   marginTop: "20px",
   marginBottom: "10px",
+  fontStyle: "sans-serif",
 }));
 
 export const Summary = styled(Box)(() => ({
@@ -58,6 +60,7 @@ export const Summary = styled(Box)(() => ({
   lineHeight: "1.6",
   color: "#333",
   marginTop: "10px",
+  fontStyle: "sans-serif",
 }));
 
 export const SkillsContainer = styled(Box)(() => ({
@@ -84,6 +87,3 @@ export const ProjectDetail = styled(Box)(() => ({
   marginBottom: "10px",
   marginTop: "10px",
 }));
-
-
-

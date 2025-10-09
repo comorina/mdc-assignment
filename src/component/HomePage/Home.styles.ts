@@ -9,4 +9,5 @@ export const HomeContainer = styled(Box, {
   height: "100%",
   gridTemplateColumns: collapsed ? "60px 1fr" : "300px 1fr",
   transition: "grid-template-columns 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+  backgroundColor: "#F5F7FA",
 }));

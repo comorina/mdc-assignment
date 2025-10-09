@@ -3,7 +3,8 @@ import { Box, ListItemButton } from "@mui/material";
 
 export const SidebarContainer = styled(Box)({
   height: "100%",
-  backgroundColor: "#2d8be7",
+  // backgroundColor: "#2d8be7",
+  backgroundColor: "#1565C0",
   display: "flex",
   flexDirection: "column",
 });
@@ -33,7 +34,7 @@ export const BurggerIconContainer = styled(Box)(() => ({
 export const UserListContainer = styled(Box)({
   height: "calc(100% - 56px)",
   overflowY: "auto",
-  scrollbarWidth: "none"
+  scrollbarWidth: "none",
 });
 
 export const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
@@ -49,7 +50,7 @@ export const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
     fontWeight: 400,
   },
   "&:hover": {
-    backgroundColor: "#fff",
+    backgroundColor: "#1976D2",
     color: "#000",
     "& .MuiListItemText-primary": {
       color: "#000",

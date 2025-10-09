@@ -10,6 +10,7 @@ import { Box, Button } from "@mui/material";
 import AddNewUserDialog from "../dialogBox/addNewUSerDialogBox/addNewUser";
 
 function Dashboard() {
+  console.log("Dashboard render");
   const [openDailog, setOpenDialog] = useState(false);
   const users = useSelector(
     (state: UserDetailDataModel) => state.userData.userDetail,
@@ -36,11 +37,13 @@ function Dashboard() {
 
   return (
     <>
-      {openDailog &&<AddNewUserDialog
-        open={openDailog}
-        editingUser={undefined}
-        onClose={() => setOpenDialog(false)}
-      />}
+      {openDailog && (
+        <AddNewUserDialog
+          open={openDailog}
+          editingUser={undefined}
+          onClose={() => setOpenDialog(false)}
+        />
+      )}
       <Box
         sx={{
           display: "flex",
