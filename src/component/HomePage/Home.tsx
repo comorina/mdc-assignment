@@ -16,14 +16,14 @@ function Home() {
       method: "GET",
     }).then((response) => {
       response.json().then((response) => {
-        localStorage.setItem("userDetails", JSON.stringify(response));
         dispatch(storeTheData(response));
+        localStorage.setItem("userDetails", JSON.stringify(response));
       });
     });
   }, [dispatch]);
 
   useEffect(() => {
-    if (!userDetails || Object.keys(userDetails).length === 0) {
+    if (userDetails.length === 0) {
       const localData = localStorage.getItem("userDetails");
       if (localData) {
         dispatch(storeTheData(JSON.parse(localData)));
@@ -31,7 +31,7 @@ function Home() {
         getUserDataCallback();
       }
     }
-  }, [userDetails, getUserDataCallback, dispatch]);
+  }, [ getUserDataCallback, dispatch, userDetails.length]);
   console.log("home colapse ", collapsed )
 
   return (

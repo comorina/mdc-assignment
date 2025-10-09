@@ -6,15 +6,9 @@ import {
   SidebarHeader,
   StyledListItemButton,
   UserListContainer,
-  
 } from "./Sidebar.styles";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import {
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
+import { IconButton, List, ListItem, ListItemText } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import { NavLink, useLocation } from "react-router-dom";
 import type {
@@ -26,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../storeManagement/slices/sidebarToggleSlice";
 
 function Sidebar() {
+  console.log("Sidebar render");
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -49,7 +44,7 @@ function Sidebar() {
   const isUserActive = (id: number) => location.pathname === `/user/${id}`;
 
   return (
-<SidebarContainer>
+    <SidebarContainer>
       <SidebarHeader>
         {!collapsed && <HeaderTextContainer>Sopra Steria</HeaderTextContainer>}
         <BurggerIconContainer>
@@ -64,7 +59,7 @@ function Sidebar() {
           <List sx={{ width: "100%", py: 0 }}>
             <ListItem disablePadding>
               <StyledListItemButton
-                component={NavLink}  
+                component={NavLink}
                 to="/dashboard"
                 end
                 disableRipple
@@ -79,7 +74,7 @@ function Sidebar() {
               <React.Fragment key={item.id}>
                 <ListItem disablePadding>
                   <StyledListItemButton
-                    component={NavLink} 
+                    component={NavLink}
                     to={`/user/${item.id}`}
                     end
                     disableRipple

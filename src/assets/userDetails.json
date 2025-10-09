@@ -174,7 +174,7 @@
     "username": "Ananya Singh",
     "email": "ananya.singh@deloitte.com",
     "contactNumber": "+91-9988776655",
-    "image": "https://i.pravatar.cc/150?img=14",
+    "image": "https://i.pravatar.cc/150?img=28",
     "shortInfo": "Backend developer specializing in microservices architecture.",
     "summary": "Backend developer at Deloitte with 5 years of experience in microservices, Kafka, and Spring Boot. Expert in event-driven architectures.",
     "companyName": "Deloitte",
@@ -428,7 +428,7 @@
     "username": "Neha Gupta",
     "email": "neha.gupta@flipkart.com",
     "contactNumber": "+91-8888888888",
-    "image": "https://i.pravatar.cc/150?img=18",
+    "image": "https://i.pravatar.cc/150?img=30",
     "shortInfo": "Mobile developer focused on cross-platform apps.",
     "summary": "Mobile developer at Flipkart with 3 years of experience in React Native and Expo. Expert in push notifications and deep linking.",
     "companyName": "Flipkart",
@@ -488,7 +488,7 @@
     "username": "Amit Raj",
     "email": "amit.raj@tcs.com",
     "contactNumber": "+91-7777777777",
-    "image": "https://i.pravatar.cc/150?img=19",
+    "image": "https://i.pravatar.cc/150?img=3",
     "shortInfo": "DevOps engineer with automation and CI/CD expertise.",
     "summary": "DevOps engineer at TCS with 6 years of experience in Jenkins, Docker, and Kubernetes. Skilled in automation and monitoring.",
     "companyName": "TCS",
@@ -608,127 +608,7 @@
     "username": "Rohan Yadav",
     "email": "rohan.yadav@google.com",
     "contactNumber": "+91-9999999999",
-    "image": "https://i.pravatar.cc/150?img=21",
-    "shortInfo": "Software engineer skilled in API design and integration.",
-    "summary": "Software engineer at Google with 8 years of experience in Go and Java. Expert in REST API and gRPC integration.",
-    "companyName": "Google",
-    "yearsOfExperience": 8,
-    "designation": "Software Engineer",
-    "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
-    "projects": [
-      {
-        "projectId": 1,
-        "projectName": "Global Messaging Platform",
-        "year": 2022,
-        "whatHaveDone": "Developed scalable APIs for real-time messaging.",
-        "roleAndResponsibility": "Software Engineer - Designed REST and gRPC endpoints.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
-      },
-      {
-        "projectId": 2,
-        "projectName": "API Gateway Service",
-        "year": 2023,
-        "whatHaveDone": "Implemented centralized API gateway for microservices with authentication and rate limiting.",
-        "roleAndResponsibility": "Software Engineer - Developed gateway logic and integrated with backend services.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "Java", "REST APIs", "gRPC"]
-      },
-      {
-        "projectId": 3,
-        "projectName": "User Analytics Microservice",
-        "year": 2021,
-        "whatHaveDone": "Built a microservice for collecting and analyzing user analytics data.",
-        "roleAndResponsibility": "Software Engineer - Designed REST APIs and data models.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "Java", "REST APIs", "SQL"]
-      },
-      {
-        "projectId": 4,
-        "projectName": "OAuth2 Authentication Service",
-        "year": 2022,
-        "whatHaveDone": "Implemented OAuth2 authentication and token management for APIs.",
-        "roleAndResponsibility": "Software Engineer - Developed authentication flows and integrated with gateway.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "Java", "REST APIs"]
-      },
-      {
-        "projectId": 5,
-        "projectName": "Cloud Spanner Migration Tool",
-        "year": 2023,
-        "whatHaveDone": "Developed a tool for migrating SQL databases to Google Cloud Spanner.",
-        "roleAndResponsibility": "Software Engineer - Built migration logic and data validation scripts.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "SQL", "Cloud Spanner"]
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "username": "Rohan Yadav",
-    "email": "rohan.yadav@google.com",
-    "contactNumber": "+91-9999999999",
-    "image": "https://i.pravatar.cc/150?img=22",
-    "shortInfo": "Software engineer skilled in API design and integration.",
-    "summary": "Software engineer at Google with 8 years of experience in Go and Java. Expert in REST API and gRPC integration.",
-    "companyName": "Google",
-    "yearsOfExperience": 8,
-    "designation": "Software Engineer",
-    "skills": ["Go", "Java", "REST APIs", "gRPC", "SQL", "Cloud Spanner"],
-    "projects": [
-      {
-        "projectId": 1,
-        "projectName": "Global Messaging Platform",
-        "year": 2022,
-        "whatHaveDone": "Developed scalable APIs for real-time messaging.",
-        "roleAndResponsibility": "Software Engineer - Designed REST and gRPC endpoints.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "gRPC", "SQL", "Cloud Spanner"]
-      },
-      {
-        "projectId": 2,
-        "projectName": "API Gateway Service",
-        "year": 2023,
-        "whatHaveDone": "Implemented centralized API gateway for microservices with authentication and rate limiting.",
-        "roleAndResponsibility": "Software Engineer - Developed gateway logic and integrated with backend services.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "Java", "REST APIs", "gRPC"]
-      },
-      {
-        "projectId": 3,
-        "projectName": "User Analytics Microservice",
-        "year": 2021,
-        "whatHaveDone": "Built a microservice for collecting and analyzing user analytics data.",
-        "roleAndResponsibility": "Software Engineer - Designed REST APIs and data models.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "Java", "REST APIs", "SQL"]
-      },
-      {
-        "projectId": 4,
-        "projectName": "OAuth2 Authentication Service",
-        "year": 2022,
-        "whatHaveDone": "Implemented OAuth2 authentication and token management for APIs.",
-        "roleAndResponsibility": "Software Engineer - Developed authentication flows and integrated with gateway.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "Java", "REST APIs"]
-      },
-      {
-        "projectId": 5,
-        "projectName": "Cloud Spanner Migration Tool",
-        "year": 2023,
-        "whatHaveDone": "Developed a tool for migrating SQL databases to Google Cloud Spanner.",
-        "roleAndResponsibility": "Software Engineer - Built migration logic and data validation scripts.",
-        "designation": "Software Engineer",
-        "skills": ["Go", "SQL", "Cloud Spanner"]
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "username": "Rohan Yadav",
-    "email": "rohan.yadav@google.com",
-    "contactNumber": "+91-9999999999",
-    "image": "https://i.pravatar.cc/150?img=23",
+    "image": "https://i.pravatar.cc/150?img=33",
     "shortInfo": "Software engineer skilled in API design and integration.",
     "summary": "Software engineer at Google with 8 years of experience in Go and Java. Expert in REST API and gRPC integration.",
     "companyName": "Google",

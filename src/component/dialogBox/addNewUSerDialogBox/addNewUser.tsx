@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import type { ChangeEvent } from "react";
 import type { FormEvent } from "react";
 import {
@@ -16,7 +16,10 @@ import {
   Typography,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { storeTheData } from "../../../storeManagement/slices/userDetailsSlice";
+import {
+  addUser,
+  updateUser,
+} from "../../../storeManagement/slices/userDetailsSlice";
 import type {
   UserDetail,
   UserDetailDataModel,
@@ -57,6 +60,7 @@ export default function AddNewUserDialog({
   onClose,
   editingUser,
 }: AddNewUserDialogProps) {
+  console.log("addnewDialog render");
   const dispatch = useDispatch();
   const existingUsers = useSelector(
     (s: UserDetailDataModel) => s.userData.userDetail
@@ -73,7 +77,6 @@ export default function AddNewUserDialog({
   const [email, setEmail] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [summary, setSummary] = useState("");
-
 
   const [projects, setProjects] = useState<ProjectForm[]>([emptyProject()]);
 
@@ -207,15 +210,19 @@ export default function AddNewUserDialog({
       projects: normalizedProjects,
     };
 
-    const updated = editingUser
-      ? existingUsers.map((u) => (u.id === editingUser.id ? newUser : u))
-      : [...existingUsers, newUser];
-
-    dispatch(storeTheData(updated));
-    localStorage.setItem("userDetails", JSON.stringify(updated));
+    let updated = existingUsers;
+    if (editingUser) {
+      updated = [newUser];
+    }
+    if (editingUser) {
+      dispatch(updateUser(updated));
+      handleClose();
+      return;
+    } else {
+      dispatch(addUser(newUser));
+    }
     handleClose();
   };
-  console.log(editingUser);
 
   const personalInfoStep = (
     <Stack spacing={2}>
@@ -292,7 +299,7 @@ export default function AddNewUserDialog({
         fullWidth
       />
       <TextField
-        label="Skills (comma separated)"
+        label="Primary Skills (comma separated)"
         value={skills}
         onChange={(e) => setSkills(e.target.value)}
         size="small"
