@@ -25,7 +25,6 @@ function ProfileCard({ userData }: { userData: UserDetail }) {
   const AddNewUserDialog = React.lazy(
     () => import("../dialogBox/addNewUSerDialogBox/addNewUser")
   );
-  console.log("Profile card render");
   const [editOpen, setEditOpen] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,7 +38,6 @@ function ProfileCard({ userData }: { userData: UserDetail }) {
       dispatch(removeUser(userData));
     }
   }
-  console.log("user data in profile card", userData);
   if (!userData) return <div>Loading...</div>;
   return (
     <CardMainContainer>

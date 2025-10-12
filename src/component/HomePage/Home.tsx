@@ -9,8 +9,13 @@ import type { UserDetailDataModel } from "../../dataModel/userDetailDataModel";
 
 function Home() {
   const dispatch = useDispatch();
-  const userDetails = useSelector((state: UserDetailDataModel) => state.userData.userDetail);
-  const collapsed = useSelector((state: { sideBarToggle: { collapsed: boolean } }) => state.sideBarToggle.collapsed);
+  const userDetails = useSelector(
+    (state: UserDetailDataModel) => state.userData.userDetail
+  );
+  const collapsed = useSelector(
+    (state: { sideBarToggle: { collapsed: boolean } }) =>
+      state.sideBarToggle.collapsed
+  );
   const getUserDataCallback = useCallback(() => {
     fetch("src/assets/userDetails.json", {
       method: "GET",
@@ -31,8 +36,7 @@ function Home() {
         getUserDataCallback();
       }
     }
-  }, [ getUserDataCallback, dispatch, userDetails.length]);
-  console.log("home colapse ", collapsed )
+  }, [getUserDataCallback, dispatch, userDetails.length]);
 
   return (
     <HomeContainer collapsed={collapsed}>

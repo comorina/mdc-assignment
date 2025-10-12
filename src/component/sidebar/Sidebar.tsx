@@ -6,11 +6,22 @@ import {
   SidebarHeader,
   StyledListItemButton,
   UserListContainer,
+  SIDEBAR_WIDTH,
+  SIDEBAR_COLLAPSED_WIDTH,
 } from "./Sidebar.styles";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import { IconButton, List, ListItem, ListItemText } from "@mui/material";
-import Divider from "@mui/material/Divider";
-import { NavLink, useLocation } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import PeopleIcon from "@mui/icons-material/People";
+import {
+  IconButton,
+  List,
+  ListItemText,
+  useTheme,
+  useMediaQuery,
+  Box,
+  ListItemIcon,
+} from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 import type {
   UserDetail,
   UserDetailDataModel,
@@ -20,9 +31,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../storeManagement/slices/sidebarToggleSlice";
 
 function Sidebar() {
-  console.log("Sidebar render");
   const dispatch = useDispatch();
   const location = useLocation();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const navigate = useNavigate();
 
   const collapsed = useSelector(
     (state: { sideBarToggle: { collapsed: boolean } }) =>
@@ -40,56 +54,91 @@ function Sidebar() {
   const handleToggle = () => {
     dispatch(toggleSidebar());
   };
+
   const isDashboardActive = location.pathname === "/dashboard";
   const isUserActive = (id: number) => location.pathname === `/user/${id}`;
 
+  const handleNavigate = (id?: number) => {
+    if (id) navigate(`/user/${id}`);
+    else navigate("/dashboard");
+    if (isMobile && !collapsed) {
+      // after navigation close (collapse) sidebar
+      dispatch(toggleSidebar());
+    }
+  };
+
+  const sidebarVisible = !collapsed;
+
   return (
-    <SidebarContainer>
-      <SidebarHeader>
-        {!collapsed && <HeaderTextContainer>Sopra Steria</HeaderTextContainer>}
-        <BurggerIconContainer>
-          <IconButton aria-label="toggle sidebar" onClick={handleToggle}>
-            <MenuRoundedIcon sx={{ color: "white" }} />
-          </IconButton>
-        </BurggerIconContainer>
-      </SidebarHeader>
+    <>
+      {isMobile && sidebarVisible && (
+        <Box
+          onClick={() => dispatch(toggleSidebar())}
+          sx={{
+            position: "fixed",
+            inset: 0,
+            bgcolor: "rgba(0,0,0,.4)",
+            zIndex: 1200,
+          }}
+          aria-hidden="true"
+        />
+      )}
+      <SidebarContainer
+        collapsed={collapsed}
+        role="navigation"
+        aria-label="User navigation"
+        data-collapsed={collapsed}
+      >
+        <SidebarHeader
+          sx={isMobile ? { justifyContent: "flex-start" } : undefined}
+        >
+          {!isMobile && !collapsed && (
+            <HeaderTextContainer>Users</HeaderTextContainer>
+          )}
+          <BurggerIconContainer>
+            <IconButton
+              size="small"
+              onClick={handleToggle}
+              sx={{ color: "white" }}
+              aria-label="toggle sidebar"
+              aria-expanded={!collapsed}
+              aria-controls="sidebar-user-list"
+            >
+              {collapsed ? <MenuIcon /> : <CloseIcon />}
+            </IconButton>
+          </BurggerIconContainer>
+        </SidebarHeader>
 
-      {!collapsed && (
-        <UserListContainer>
-          <List sx={{ width: "100%", py: 0 }}>
-            <ListItem disablePadding>
+        <UserListContainer id="sidebar-user-list">
+          <List dense disablePadding>
+            <StyledListItemButton
+              selected={isDashboardActive}
+              onClick={() => handleNavigate()}
+            >
+              <ListItemIcon sx={{ minWidth: 34, color: "inherit" }}>
+                <PeopleIcon fontSize="small" />
+              </ListItemIcon>
+              {(!collapsed || isMobile) && <ListItemText primary="Dashboard" />}
+            </StyledListItemButton>
+
+            {userList.map((u) => (
               <StyledListItemButton
-                component={NavLink}
-                to="/dashboard"
-                end
-                disableRipple
-                selected={isDashboardActive}
+                key={u.id}
+                selected={isUserActive(u.id)}
+                onClick={() => handleNavigate(u.id)}
               >
-                <ListItemText primary="Dashboard" />
+                <ListItemIcon sx={{ minWidth: 34, color: "inherit" }}>
+                  <PeopleIcon fontSize="small" />
+                </ListItemIcon>
+                {(!collapsed || isMobile) && (
+                  <ListItemText primary={u.username} />
+                )}
               </StyledListItemButton>
-            </ListItem>
-            <Divider sx={{ borderColor: "rgba(255,255,255,0.4)" }} />
-
-            {userList.map((item) => (
-              <React.Fragment key={item.id}>
-                <ListItem disablePadding>
-                  <StyledListItemButton
-                    component={NavLink}
-                    to={`/user/${item.id}`}
-                    end
-                    disableRipple
-                    selected={isUserActive(item.id)}
-                  >
-                    <ListItemText primary={item.username} />
-                  </StyledListItemButton>
-                </ListItem>
-                <Divider sx={{ borderColor: "rgba(255,255,255,0.25)" }} />
-              </React.Fragment>
             ))}
           </List>
         </UserListContainer>
-      )}
-    </SidebarContainer>
+      </SidebarContainer>
+    </>
   );
 }
 

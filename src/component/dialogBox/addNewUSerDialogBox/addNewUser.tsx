@@ -60,7 +60,6 @@ export default function AddNewUserDialog({
   onClose,
   editingUser,
 }: AddNewUserDialogProps) {
-  console.log("addnewDialog render");
   const dispatch = useDispatch();
   const existingUsers = useSelector(
     (s: UserDetailDataModel) => s.userData.userDetail
@@ -451,7 +450,7 @@ export default function AddNewUserDialog({
       }}
     >
       <DialogTitle sx={{ pb: 1 }}>
-        {editingUser ? "Edit User" : "Create User"}
+        {editingUser ? "Edit User" : "Add User"}
       </DialogTitle>
       <DialogContent dividers>
         <Stepper activeStep={activeStep} alternativeLabel sx={{ mb: 3 }}>
