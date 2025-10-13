@@ -29,6 +29,7 @@ import type {
 } from "../../dataModel/userDetailDataModel";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../storeManagement/slices/sidebarToggleSlice";
+import ThemeToggle from "../common/ThemeToggle";
 
 function Sidebar() {
   const dispatch = useDispatch();
@@ -95,18 +96,22 @@ function Sidebar() {
           {!isMobile && !collapsed && (
             <HeaderTextContainer>Users</HeaderTextContainer>
           )}
-          <BurggerIconContainer>
-            <IconButton
-              size="small"
-              onClick={handleToggle}
-              sx={{ color: "white" }}
-              aria-label="toggle sidebar"
-              aria-expanded={!collapsed}
-              aria-controls="sidebar-user-list"
-            >
-              {collapsed ? <MenuIcon /> : <CloseIcon />}
-            </IconButton>
-          </BurggerIconContainer>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            {/* Show theme toggle only when sidebar is expanded or on desktop */}
+            {!collapsed && <ThemeToggle />}
+            <BurggerIconContainer>
+              <IconButton
+                size="small"
+                onClick={handleToggle}
+                sx={{ color: "white" }}
+                aria-label="toggle sidebar"
+                aria-expanded={!collapsed}
+                aria-controls="sidebar-user-list"
+              >
+                {collapsed ? <MenuIcon /> : <CloseIcon />}
+              </IconButton>
+            </BurggerIconContainer>
+          </Box>
         </SidebarHeader>
 
         <UserListContainer id="sidebar-user-list">

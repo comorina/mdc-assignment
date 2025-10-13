@@ -5,6 +5,7 @@ import {
   Chip,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 import {
   AvatarWrapper,
@@ -22,6 +23,7 @@ import { useDispatch } from "react-redux";
 import type { UserDetail } from "../../dataModel/userDetailDataModel";
 
 function ProfileCard({ userData }: { userData: UserDetail }) {
+  const theme = useTheme();
   const AddNewUserDialog = React.lazy(
     () => import("../dialogBox/addNewUSerDialogBox/addNewUser")
   );

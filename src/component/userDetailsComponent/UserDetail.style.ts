@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 export const UserDetailContainer = styled(Box)(({ theme }) => ({
   minHeight: "100vh",
   borderRadius: 8,
-  backgroundColor: "#fff",
+  backgroundColor: theme.palette.background.default,
   display: "flex",
   flexDirection: "column",
   overflowX: "hidden",
@@ -40,7 +40,7 @@ export const UserImageContainer = styled(Box)(({ theme }) => ({
   gap: theme.spacing(3),
   justifyContent: "flex-start",
   alignItems: "center",
-  backgroundColor: "#DFF3FF",
+  backgroundColor: theme.palette.mode === 'dark' ? '#2d2d2d' : '#DFF3FF',
   padding: theme.spacing(3, 3),
   [theme.breakpoints.down("md")]: {
     padding: theme.spacing(2),
@@ -65,7 +65,7 @@ export const UserNameContainer = styled(Box)(({ theme }) => ({
   fontSize: "clamp(1.8rem, 4vw, 3.2rem)",
   fontWeight: 600,
   marginTop: 10,
-  color: "#3b3838",
+  color: theme.palette.text.primary,
   fontFamily: "serif",
   lineHeight: 1.15,
   wordBreak: "break-word",
@@ -73,11 +73,14 @@ export const UserNameContainer = styled(Box)(({ theme }) => ({
 
 export const UserEmailContainer = styled(Box)(({ theme }) => ({
   fontSize: "clamp(.85rem, 1.4vw, 1.15rem)",
-  color: "#616161",
+  color: theme.palette.text.secondary,
   marginTop: 6,
   display: "flex",
   flexWrap: "wrap",
   gap: theme.spacing(1),
+  [theme.breakpoints.down("sm")]: {
+    color: "#424242", // Better contrast for mobile
+  },
 }));
 
 export const SummaryContainer = styled(Box)(({ theme }) => ({
@@ -101,7 +104,7 @@ export const SectionTitle = styled(Box)(({ theme }) => ({
 export const Summary = styled(Box)(({ theme }) => ({
   fontSize: "clamp(.9rem, 1.4vw, 1.15rem)",
   lineHeight: 1.55,
-  color: "#333",
+  color: theme.palette.text.primary,
   marginTop: 10,
   fontFamily: "sans-serif",
   whiteSpace: "pre-line",
@@ -118,8 +121,10 @@ export const ProjectContainer = styled(Box)(({ theme }) => ({
   marginTop: 20,
   padding: theme.spacing(3),
   borderRadius: 12,
-  background: "#fafafa",
-  boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
+  background: theme.palette.background.paper,
+  boxShadow: theme.palette.mode === 'dark' 
+    ? "0 1px 2px rgba(0,0,0,0.3)"
+    : "0 1px 2px rgba(0,0,0,0.06)",
   [theme.breakpoints.down("md")]: {
     padding: theme.spacing(2),
   },
@@ -138,8 +143,11 @@ export const ProjectTitle = styled(Box)(({ theme }) => ({
 export const ProjectDetail = styled(Box)(({ theme }) => ({
   fontSize: "clamp(.85rem, 1.2vw, 1.05rem)",
   lineHeight: 1.5,
-  color: "#555",
+  color: theme.palette.text.primary,
   marginBottom: 10,
   marginTop: 6,
   wordBreak: "break-word",
+  [theme.breakpoints.down("sm")]: {
+    color: "#424242", // Better contrast for mobile
+  },
 }));

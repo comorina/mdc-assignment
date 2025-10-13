@@ -19,9 +19,15 @@ export const SidebarContainer = styled(Box, {
   width: collapsed ? SIDEBAR_COLLAPSED_WIDTH : SIDEBAR_WIDTH,
   transition: "width .25s ease",
   overflow: "hidden",
+  position: "relative",
+  zIndex: 1300,
   [theme.breakpoints.down("sm")]: {
     // keep it always visible; optionally narrower when collapsed
     width: collapsed ? 56 : 200,
+    position: "fixed",
+    left: 0,
+    top: 0,
+    zIndex: 1300,
   },
 }));
 
@@ -32,6 +38,8 @@ export const SidebarHeader = styled(Box)({
   padding: "8px 10px",
   height: 56,
   flexShrink: 0,
+  position: "relative",
+  zIndex: 1301,
 });
 
 export const HeaderTextContainer = styled(Box)<{ collapsed?: boolean }>(
@@ -58,6 +66,8 @@ export const UserListContainer = styled(Box)(({ theme }) => ({
   overflowY: "auto",
   scrollbarWidth: "none",
   paddingBottom: theme.spacing(1),
+  position: "relative",
+  zIndex: 1301,
   "&::-webkit-scrollbar": {
     width: 6,
   },

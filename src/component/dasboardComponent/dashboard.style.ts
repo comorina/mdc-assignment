@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
 
-export const DashboardContainer = styled(Box)({
+export const DashboardContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   width: "100%",
   flexWrap: "wrap",
@@ -9,4 +9,6 @@ export const DashboardContainer = styled(Box)({
   paddingTop: "32px",
   paddingBottom: "32px",
   justifyContent: "center",
-});
+  backgroundColor: theme.palette.background.default,
+  minHeight: "100vh",
+}));
