@@ -29,6 +29,7 @@ import type {
 } from "../../dataModel/userDetailDataModel";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../../storeManagement/slices/sidebarToggleSlice";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 
 function Sidebar() {
   const dispatch = useDispatch();
@@ -116,7 +117,7 @@ function Sidebar() {
               onClick={() => handleNavigate()}
             >
               <ListItemIcon sx={{ minWidth: 34, color: "inherit" }}>
-                <PeopleIcon fontSize="small" />
+                <DashboardIcon fontSize="small" />
               </ListItemIcon>
               {(!collapsed || isMobile) && <ListItemText primary="Dashboard" />}
             </StyledListItemButton>
