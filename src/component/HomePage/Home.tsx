@@ -1,42 +1,17 @@
+import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HomeContainer } from "./Home.styles";
 import { Box } from "@mui/material";
 import Sidebar from "../sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
-import { storeTheData } from "../../storeManagement/slices/userDetailsSlice";
-import { useCallback, useEffect } from "react";
-import type { UserDetailDataModel } from "../../dataModel/userDetailDataModel";
+import { useUserDetails } from "../../customHook/useUserDetails";
 
 function Home() {
-  const dispatch = useDispatch();
-  const userDetails = useSelector(
-    (state: UserDetailDataModel) => state.userData.userDetail
-  );
+  useUserDetails();
   const collapsed = useSelector(
     (state: { sideBarToggle: { collapsed: boolean } }) =>
       state.sideBarToggle.collapsed
   );
-  const getUserDataCallback = useCallback(() => {
-    fetch("src/assets/userDetails.json", {
-      method: "GET",
-    }).then((response) => {
-      response.json().then((response) => {
-        dispatch(storeTheData(response));
-        localStorage.setItem("userDetails", JSON.stringify(response));
-      });
-    });
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (userDetails.length === 0) {
-      const localData = localStorage.getItem("userDetails");
-      if (localData) {
-        dispatch(storeTheData(JSON.parse(localData)));
-      } else {
-        getUserDataCallback();
-      }
-    }
-  }, [getUserDataCallback, dispatch, userDetails.length]);
 
   return (
     <HomeContainer collapsed={collapsed}>

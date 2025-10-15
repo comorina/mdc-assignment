@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import {
   BurggerIconContainer,
   HeaderTextContainer,
@@ -6,8 +6,6 @@ import {
   SidebarHeader,
   StyledListItemButton,
   UserListContainer,
-  SIDEBAR_WIDTH,
-  SIDEBAR_COLLAPSED_WIDTH,
 } from "./Sidebar.styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -63,7 +61,6 @@ function Sidebar() {
     if (id) navigate(`/user/${id}`);
     else navigate("/dashboard");
     if (isMobile && !collapsed) {
-      // after navigation close (collapse) sidebar
       dispatch(toggleSidebar());
     }
   };

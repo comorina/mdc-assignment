@@ -18,46 +18,63 @@ import {
 } from "./UserDetail.style";
 import { useParams } from "react-router-dom";
 import { Box, Chip, Divider } from "@mui/material";
+import { useUserDetails } from "../../customHook/useUserDetails";
+import { useEffect, useMemo } from "react";
 
 function UserDetail() {
   const { id } = useParams();
   const numericId = Number(id);
-
-  const userDetail = useSelector((state: UserDetailDataModel) =>
+  const { userDetails, loading, reloadUserDetails } = useUserDetails();
+  const selectedUser = useSelector((state: UserDetailDataModel) =>
     state.userData.userDetail.find((u) => u.id === numericId)
   );
 
-  if (!userDetail) {
+  const mergedUser: UserDetail | undefined = useMemo(() => {
+    const fromList = userDetails.find((u) => u.id === numericId);
+    if (!selectedUser && fromList) return fromList;
+    if (selectedUser && fromList) {
+      return { ...fromList, ...selectedUser };
+    }
+    return selectedUser;
+  }, [selectedUser, userDetails, numericId]);
+
+  useEffect(() => {
+    if (!mergedUser && !loading) {
+      reloadUserDetails();
+    }
+  }, [mergedUser]);
+
+  if (!mergedUser) {
     return <UserDetailContainer>Loading...</UserDetailContainer>;
   }
 
   const MAX_INLINE_SKILLS = 12;
-  const skillOverflow = (userDetail.skills?.length || 0) > MAX_INLINE_SKILLS;
+  const skillOverflow = (mergedUser.skills?.length || 0) > MAX_INLINE_SKILLS;
 
   return (
     <UserDetailContainer>
       <UserImageContainer>
-        <UserImage src={userDetail.image} alt={userDetail.username} />
+        <UserImage src={mergedUser.image} alt={mergedUser.username} />
         <USerInfoContainer>
           <UserNameContainer>
-            {userDetail.username} | {userDetail.companyName}
+            {mergedUser.username} | {mergedUser.companyName}
           </UserNameContainer>
           <UserEmailContainer>
-            <span>Email: {userDetail.email}</span>
-            <span>Contact: {userDetail.contactNumber}</span>
-            {userDetail.yearsOfExperience != null && (
-              <span>YOE: {userDetail.yearsOfExperience}</span>
+            <span>Email: {mergedUser.email}</span>
+            <span>Contact: {mergedUser.contactNumber}</span>
+            {mergedUser.yearsOfExperience != null && (
+              <span>YOE: {mergedUser.yearsOfExperience}</span>
             )}
           </UserEmailContainer>
-          {!!userDetail.skills?.length && (
+          {!!mergedUser.skills?.length && (
             <Box mt={1.5}>
               <SectionTitle sx={{ mb: 1, fontSize: "clamp(1rem,2vw,1.3rem)" }}>
                 Skills
               </SectionTitle>
               <SkillsContainer>
                 {(skillOverflow
-                  ? userDetail.skills.slice(0, MAX_INLINE_SKILLS)
-                  : userDetail.skills
+                  ? mergedUser.skills.slice(0, MAX_INLINE_SKILLS)
+                  : mergedUser.skills
                 ).map((s) => (
                   <Chip
                     key={s}
@@ -75,7 +92,7 @@ function UserDetail() {
                 {skillOverflow && (
                   <Chip
                     label={`+${
-                      userDetail.skills.length - MAX_INLINE_SKILLS
+                      mergedUser.skills.length - MAX_INLINE_SKILLS
                     } more`}
                     size="small"
                     variant="filled"
@@ -92,10 +109,10 @@ function UserDetail() {
       <SummaryContainer>
         <SectionTitle>Summary</SectionTitle>
         <Divider />
-        <Summary>{userDetail.summary}</Summary>
+        <Summary>{mergedUser.summary}</Summary>
       </SummaryContainer>
 
-      {userDetail.projects?.map((project) => (
+      {mergedUser.projects?.map((project) => (
         <ProjectContainer key={project.id}>
           <ProjectTitle>{project.projectName}</ProjectTitle>
           <Divider />

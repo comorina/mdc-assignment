@@ -24,7 +24,7 @@ export const userDetailsSlice = createSlice({
       localStorage.setItem("userDetails", JSON.stringify(state.userDetail));
     },
     updateUser: (state, action) => {
-      // console.log(current(state));  for inspection of state by thsi current method
+      // console.log(current(state));  //for inspection of state by thsi current method
       const updatedUser = action.payload[0];
       const index = state.userDetail.findIndex(
         (user) => user?.id === updatedUser?.id

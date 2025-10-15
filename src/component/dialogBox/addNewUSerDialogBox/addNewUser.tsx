@@ -225,7 +225,7 @@ export default function AddNewUserDialog({
 
   const personalInfoStep = (
     <Stack spacing={2}>
-      <SectionHeader variant="subtitle1">Basic</SectionHeader>
+      <SectionHeader variant="subtitle1">Personal Info</SectionHeader>
       <TwoCol>
         <TextField
           label="Username*"
@@ -359,7 +359,7 @@ export default function AddNewUserDialog({
               )}
             </Box>
             <TextField
-              label="Project Name"
+              label="Project Name*"
               value={p.projectName}
               onChange={(e) =>
                 updateProject(idx, "projectName", e.target.value)

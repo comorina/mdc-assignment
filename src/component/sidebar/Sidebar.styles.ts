@@ -20,7 +20,6 @@ export const SidebarContainer = styled(Box, {
   transition: "width .25s ease",
   overflow: "hidden",
   [theme.breakpoints.down("sm")]: {
-    // keep it always visible; optionally narrower when collapsed
     width: collapsed ? 56 : 200,
   },
 }));
